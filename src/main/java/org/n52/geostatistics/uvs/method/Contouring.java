@@ -21,14 +21,14 @@ import org.n52.geostatistics.uvs.type.DataType;
 import org.n52.geostatistics.uvs.type.UncertaintyType;
 
 /**
- * @author Daniel
+ * @author Daniel Nüst (d.nuest@52north.org)
  * 
  */
 public class Contouring extends StaticVisualizationMethod {
 
-	private static String name = "Contouring";
-
 	private static String description = "This method is used to visualise uncertainty through contour lines. In a multivariate mapping environment, contour lines of different colours can be used to distinguish between different variables and their uncertainties with the intensity of colour, as well as the line thickness. Similarly positional uncertainty is depicted through the gap widths in the dots of these contour lines where higher uncertainty leads to wider gaps (Osorio & Brodlie 2008)";
+
+	private static String name = "Contouring";
 
 	/**
 	 * 

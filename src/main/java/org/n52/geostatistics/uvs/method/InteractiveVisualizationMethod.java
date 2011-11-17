@@ -21,7 +21,7 @@ import org.n52.geostatistics.uvs.type.DataType;
 import org.n52.geostatistics.uvs.type.UncertaintyType;
 
 /**
- * @author v_sena01
+ * @author Hansi Senaratne (hansi.senaratne@wwu.de)
  * @version 1.0
  * @created 30-Aug-2011 09:00:41
  */

@@ -45,7 +45,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 
- * @author Daniel
+ * @author Hansi Senaratne (hansi.senaratne@wwu.de), Daniel Nüst (d.nuest@52north.org)
  * 
  */
 public class UvsModel {

@@ -23,19 +23,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author v_sena01
+ * @author Hansi Senaratne (hansi.senaratne@wwu.de)
  * @version 1.0
  * @created 30-Aug-2011 09:00:42
  */
 public abstract class VisualizationMethod {
 
-	Logger logger = LoggerFactory.getLogger(VisualizationMethod.class);
-
-	public UncertaintyType m_UncertaintyType;
-	public DataType m_DataType;
-	public DataFormat m_DataFormat;
-	public String name;
 	public String description;
+
+	Logger logger = LoggerFactory.getLogger(VisualizationMethod.class);
+	public DataFormat m_DataFormat;
+	public DataType m_DataType;
+	public UncertaintyType m_UncertaintyType;
+	public String name;
 
 	/**
 	 * 
