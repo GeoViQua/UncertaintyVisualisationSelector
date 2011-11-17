@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2011 52°North Initiative for Geospatial Open Source Software GmbH
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+ 
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<!-- http://www.criticism.com/dita/dtd1.html, http://csharpcomputing.com/XMLTutorial/Lesson8.htm -->
+<!DOCTYPE note
+[
+<!ELEMENT UVSData (VisualisationMethodList+)>
+<!ELEMENT VisualisationMethodList (VisualisationMethod*)>
+<!ATTLIST VisualisationMethodList
+  id ID #REQUIRED
+>
+<!ELEMENT VisualisationMethod (name, description, imageFile*, reference*)>
+<!ATTLIST VisualisationMethod
+  id ID #REQUIRED
+  parent CDATA #IMPLIED
+>
+<!ELEMENT imageFile (#PCDATA)>
+<!ELEMENT reference (#PCDATA)>
+<!ATTLIST reference
+  type (text|http|bibtex|citation|file) #REQUIRED
+>
+]>
+<UVSData>
+
+	<VisualisationMethodList id="v1.0"><!-- use id for selective 
+			loading of lists? -->
+
+		<VisualisationMethod id="static">
+			<name>Static Visualisation</name>
+			<description>...</description>
+		</VisualisationMethod>
+
+		<VisualisationMethod id="dynamic">
+			<name>Dynamic Visualisation</name>
+			<description>...</description>
+		</VisualisationMethod>
+
+		<VisualisationMethod id="interactive">
+			<name>Interactive Visualisation</name>
+			<description>...</description>
+		</VisualisationMethod>
+
+		<VisualisationMethod id="contouring" parent="static">
+			<name>Contouring</name>
+			<description>This method is used to visualise uncertainty through
+				contour lines. In a multivariate mapping environment, contour lines
+				of different colours can be used to distinguish between different
+				variables and their uncertainties with the intensity of colour, as
+				well as the line thickness. Similarly positional uncertainty is
+				depicted through the gap widths in the dots of these contour lines
+				where higher uncertainty leads to wider gaps (Osorio &amp; Brodlie
+				2008).
+			</description>
+			<imageFile>contouring.png</imageFile>
+			<reference type="citation">bibtex citation? take a look at google
+				scholar results. zotero et al support would be nice.
+			</reference><!-- type string -->
+			<reference type="file">osorio_brodlie_2008.pdf</reference>
+			<reference type="http">http://author-homepage.edu/</reference>
+		</VisualisationMethod>
+
+	</VisualisationMethodList>
+
+	<VisualisationMethodList id="v2.0">
+	</VisualisationMethodList>
+
+</UVSData>
