@@ -6,16 +6,17 @@
 	<artifactId>52n-uvs</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	
+
 	<name>UVS</name>
 	<description>Uncertainty Visualisation Selector</description>
 	<url>http://52north.org/communities/geostatistics</url>
-	
+	<inceptionYear>2011</inceptionYear>
+
 	<organization>
 		<name>52°North Initiative for Geospatial Open Source Software GmbH</name>
 		<url>http://52north.org</url>
 	</organization>
-	
+
 	<developers>
 		<developer>
 			<name>Hansi Senaratne</name>
@@ -34,11 +35,24 @@
 			<id>DanielNuest</id>
 		</developer>
 	</developers>
-	
+
+	<mailingLists>
+		<mailingList>
+			<name>Geostatistics Community Mailing List</name>
+			<subscribe>http://list.52north.org/mailman/listinfo/geostatistics</subscribe>
+			<unsubscribe>http://list.52north.org/mailman/listinfo/geostatistics</unsubscribe>
+			<post>geostatistics@52north.org</post>
+			<archive>http://list.52north.org/pipermail/geostatistics</archive>
+			<otherArchives>
+				<otherArchive>http://geostatistics.forum.52north.org</otherArchive>
+			</otherArchives>
+		</mailingList>
+	</mailingLists>
+
 	<scm>
 		<connection>scm:svn:https://svn.52north.org/svn/geostatistics/main/geoviqua/uvs/trunk</connection>
 	</scm>
-	
+
 	<licenses>
 		<license>
 			<name>Apache 2</name>
