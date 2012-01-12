@@ -158,6 +158,11 @@ limitations under the License.
 					href="http://plone.itc.nl/agile_old/Conference/2011-utrecht/contents/pdf/posters/p_144.pdf">
 					AGILE 2011 - Poster Abstract</a>
 			</p>
+			<p>
+				<a
+					href="https://wiki.52north.org/bin/view/Geostatistics/UncertaintyVisualisationSelector">Development
+					Documentation</a> in the 52&deg;North Wiki.
+			</p>
 
 		</div>
 

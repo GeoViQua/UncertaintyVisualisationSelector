@@ -15,7 +15,7 @@
 			title="Institute for Geoinformatics"><img
 				src="<%=request.getContextPath()%>/images/ifgiLogo.gif"
 				alt="Institute for Geoinformatics" height="50" /></a></li>
-		<li><a href="http://52north.org//" target="blank"
+		<li><a href="http://52north.org/" target="blank"
 			title="52&#176;North Initiative for Geospatial Open Source Software GmbH"><img
 				src="<%=request.getContextPath()%>/images/52nLogo.gif"
 				alt="52&#176;North Initiative for Geospatial Open Source Software GmbH"
