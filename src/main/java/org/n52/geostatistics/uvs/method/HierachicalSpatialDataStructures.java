@@ -23,29 +23,24 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
 /**
  * 
  * @author v_sena01
- *
+ * 
  */
 
-public class HierachicalSpatialDataStructures extends StaticVisualizationMethod{
-	
+public class HierachicalSpatialDataStructures extends StaticVisualizationMethod {
+
 	private static String name = "Hierachical Spatial Data Structures";
 
-	private static String description  = "Hierarchical data structures (e.g. Quadtrees) are used as a transparent tessellated layer on top of the data  to represent the amount of associated uncertainty. A finer tessellation can indicate less uncertain areas whereas a coarser tessellation can indicate more uncertain regions. <a href = 'http://www.geocomputation.org/2003/Papers/Kardos_Paper.pdf'>(Kardos et al. 2003)</a> <div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'images/Hierarchical spatial data structures.png/',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function (){closeJS()}})'><img src='images/Hierarchical spatial data structures.png' width = '40' height = '30'/> <em>Image taken from Kardos et al. 2004</em></li></ul> </div> ";
-	
-			
-			/**
-			 * 
-			 * @param uT
-			 * @param dF
-			 * @param dT
-			 */
-			public HierachicalSpatialDataStructures(UncertaintyType uT, DataFormat dF, DataType dT) {
-				super(uT, dF, dT, name, description);
-			}
+	private static String description = "Hierarchical data structures (e.g. Quadtrees) are used as a transparent tessellated layer on top of the data  to represent the amount of associated uncertainty. A finer tessellation can indicate less uncertain areas whereas a coarser tessellation can indicate more uncertain regions. <a href = 'http://www.geocomputation.org/2003/Papers/Kardos_Paper.pdf'>(Kardos et al. 2003)</a> <div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'images/Hierarchical spatial data structures.png/',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function (){closeJS()}})'><img src='images/Hierarchical spatial data structures.png' width = '40' height = '30'/> <em>Image taken from Kardos et al. 2004</em></li></ul> </div> ";
 
-
-
-	
-	
+	/**
+	 * 
+	 * @param uT
+	 * @param dF
+	 * @param dT
+	 */
+	public HierachicalSpatialDataStructures(UncertaintyType uT, DataFormat dF,
+			DataType dT) {
+		super(uT, dF, dT, name, description);
+	}
 
 }

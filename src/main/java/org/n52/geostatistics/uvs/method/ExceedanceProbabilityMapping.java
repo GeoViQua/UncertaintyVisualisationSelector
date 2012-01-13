@@ -22,7 +22,7 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
 /**
  * 
  * @author v_sena01
- *
+ * 
  */
 
 public class ExceedanceProbabilityMapping extends StaticVisualizationMethod {
@@ -36,7 +36,8 @@ public class ExceedanceProbabilityMapping extends StaticVisualizationMethod {
 	 * @param dF
 	 * @param dT
 	 */
-	public ExceedanceProbabilityMapping(UncertaintyType uT, DataFormat dF, DataType dT) {
+	public ExceedanceProbabilityMapping(UncertaintyType uT, DataFormat dF,
+			DataType dT) {
 		super(uT, dF, dT, name, description);
 	}
 

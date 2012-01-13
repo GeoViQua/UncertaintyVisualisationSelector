@@ -23,14 +23,14 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
 /**
  * 
  * @author v_sena01
- *
+ * 
  */
 
 public class AnimatedIsolines extends DynamicVisualizationMethod {
 
 	private static String name = "Animated Isolines";
 	private static String description = "The concept of contouring or isolines can also be used in an animated environment. <a href = 'http://www.geovista.psu.edu/sites/icavis/icavis/febm.html'>(Fauerbach et al. 1996) </a>. Click for demo <div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'http://www.geovista.psu.edu/sites/icavis/icavis/febm/sdhbivar.html',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function (){closeJS()}})'><img src='images/Animated Isoline.png' width = '40' height = '30'/></li></ul> </div> ";
-	
+
 	/**
 	 * 
 	 * @param uT

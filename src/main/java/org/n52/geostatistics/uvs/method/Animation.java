@@ -23,14 +23,14 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
 /**
  * 
  * @author v_sena01
- *
+ * 
  */
 
 public class Animation extends DynamicVisualizationMethod {
 
 	private static String name = "Animation";
 	private static String description = "Different realisations of the uncertain attribute are animated together in 2D to emphasise the uncertainty. <a href ='http://www.sciencedirect.com/science/article/pii/S0098300497000058'>(Ehlschlaeger et al. 1997) </a>.";
-	
+
 	/**
 	 * 
 	 * @param uT

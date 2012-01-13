@@ -23,14 +23,14 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
 /**
  * 
  * @author v_sena01
- *
+ * 
  */
 
 public class Whitening extends StaticVisualizationMethod {
 
 	private static String name = "Whitening";
 	private static String description = "A colour model is used where the colour hue is used to represent the data and the saturation-intensity (whiteness) is used to represent the associated uncertainty. The amount of white colour, proportional to the uncertinty is mixed in with the hue which represents the prediction. <a href='http://www.spatial-accuracy.org/system/files/Hengl2006accuracy.pdf'>(Hengl 2006)</a> <div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'images/Whitening.png/',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function (){closeJS()}})'><img src='images/Whitening.png' width = '40' height = '30'/><em>Image taken from Hengl & Toomanian 2006</em></li> </ul></div> ";
-	
+
 	/**
 	 * 
 	 * @param uT

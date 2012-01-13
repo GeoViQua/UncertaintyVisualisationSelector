@@ -23,10 +23,10 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
 /**
  * 
  * @author v_sena01
- *
+ * 
  */
 public class BlinkingPixels extends DynamicVisualizationMethod {
-	
+
 	private static String name = "Blinking Pixels";
 	private static String description = "The categorical data in each grid cell of a map is represented by colour. The colour remains stable for pixels with less uncertain classifications and changes continuously proportional to the uncertainty in the data creating a flickering environment. <a href = 'http://utpjournals.metapress.com/content/b20432p4263l76w0/'>(Fisher 1993)</a>.";
 
@@ -40,4 +40,3 @@ public class BlinkingPixels extends DynamicVisualizationMethod {
 		super(uT, dF, dT, name, description);
 	}
 }
-

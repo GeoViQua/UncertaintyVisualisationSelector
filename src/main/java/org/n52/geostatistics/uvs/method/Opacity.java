@@ -23,13 +23,13 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
 /**
  * 
  * @author v_sena01
- *
+ * 
  */
 public class Opacity extends StaticVisualizationMethod {
-	
+
 	private static String name = "Opacity";
 	private static String description = "Less uncertain data is seen less opaque and more uncertain data is more opaque. This concept can also be used in reverse where uncertain data is shown more transparently. <a href = 'http://www.nws.noaa.gov/ost/nfuse/MacEachren_et_al_FINAL.pdf'>(MacEachren et al. 2005)</a><div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'images/Opacity.png/',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS()}})'><img src='images/Opacity.png' width = '40' height = '30'/><em>Image taken from Grigoryan & Rheingans 2004</em></li> </ul></div> ";
-	
+
 	/**
 	 * 
 	 * @param uT

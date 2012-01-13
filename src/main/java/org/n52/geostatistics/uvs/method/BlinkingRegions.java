@@ -23,14 +23,14 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
 /**
  * 
  * @author v_sena01
- *
+ * 
  */
 
 public class BlinkingRegions extends DynamicVisualizationMethod {
-	
+
 	private static String name = "Bling Regions";
 	private static String description = "Two layers of attribute data and uncertainty data are identified by their legends of varying classes of data and uncertainty respectively. These two images are overlaid on top of another and alternately displayed. <a href = 'http://www.spatial-accuracy.org/system/files/Kardos2006accuracy.pdf'>(Kardos et al. 2006) </a>";
-	
+
 	/**
 	 * 
 	 * @param uT
