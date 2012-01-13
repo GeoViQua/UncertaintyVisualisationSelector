@@ -23,6 +23,9 @@ limitations under the License.
 <%@ page import="org.n52.geostatistics.uvs.method.*"%>
 <%@ page import="org.n52.geostatistics.uvs.type.*"%>
 <%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.Set"%>
+<%@ page import="java.util.Map"%>
+<%@ page import="java.util.Map.Entry"%>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -98,6 +101,20 @@ limitations under the License.
 					out.println("<b>Method name:</b> " + visListElement.name);
 					out.println("<br />");
 					out.println("<b>Description:</b> " + visListElement.description);
+					
+					// untested code to start with:
+					/*
+					out.println("<b>Description:</b> " + visListElement.descriptionText);
+					out.println("<br/><b>References:</b> ");
+					Set<Entry<String, String>> links = visListElement.referenceLinks.entrySet();
+					while(links.iterator().hasNext()) {
+						Entry<String, String> e = links.iterator().next();
+						out.println("<a href=\"" + e.getValue() + "\"");
+						out.println(e.getKey());
+						out.println("</a>");
+					}
+					*/
+					
 					out.println("</li>");
 				}
 			%>

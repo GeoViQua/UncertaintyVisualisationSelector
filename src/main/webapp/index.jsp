@@ -210,10 +210,10 @@ limitations under the License.
 					the purposes set out above.
 				</p>
 			</div>
-
-
-
 		</div>
+
+	</div>
+	<!-- main -->
 </body>
 
 </html>

@@ -16,6 +16,9 @@
  */
 package org.n52.geostatistics.uvs.method;
 
+import java.util.Collection;
+import java.util.Map;
+
 import org.n52.geostatistics.uvs.format.DataFormat;
 import org.n52.geostatistics.uvs.type.DataType;
 import org.n52.geostatistics.uvs.type.UncertaintyType;
@@ -30,6 +33,15 @@ import org.slf4j.LoggerFactory;
 public abstract class VisualizationMethod {
 
 	public String description;
+
+	/*
+	 * 
+	 */
+	public String descriptionText;
+
+	public Map<String, String> referenceLinks;
+
+	public Collection<String> images;
 
 	Logger logger = LoggerFactory.getLogger(VisualizationMethod.class);
 	public DataFormat m_DataFormat;

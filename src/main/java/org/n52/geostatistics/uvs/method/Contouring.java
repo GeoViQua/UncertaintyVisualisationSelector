@@ -48,6 +48,11 @@ public class Contouring extends StaticVisualizationMethod {
 			+ "<img src='images/Contouring.png' width='40' height='30'/>"
 			+ "</span>" + "</li></ul></div>";
 
+	/*
+	 * the new way:
+	 */
+	private static String descriptionText = "This method is used to visualise uncertainty through contour lines. In a multivariate mapping environment, contour lines of different colours can be used to distinguish between different variables and their uncertainties with the intensity of colour, as well as the line thickness. Similarly positional uncertainty is depicted through the gap widths in the dots of these contour lines where higher uncertainty leads to wider gaps.";
+
 	// TODO add the following variables to the abstract class
 	// VisualizationMethod and add getters there, use these getters in the JSP
 	// file to create the same display as before
