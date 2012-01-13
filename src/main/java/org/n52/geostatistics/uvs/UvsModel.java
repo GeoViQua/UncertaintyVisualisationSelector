@@ -29,11 +29,25 @@ import org.n52.geostatistics.uvs.domain.UrbanPlanningDomain;
 import org.n52.geostatistics.uvs.format.DataFormat;
 import org.n52.geostatistics.uvs.format.RasterFormat;
 import org.n52.geostatistics.uvs.format.VectorFormat;
+import org.n52.geostatistics.uvs.method.AdjacentMaps;
+import org.n52.geostatistics.uvs.method.AnimatedIsolines;
+import org.n52.geostatistics.uvs.method.Animation;
+import org.n52.geostatistics.uvs.method.BlinkingPixels;
+import org.n52.geostatistics.uvs.method.BlinkingRegions;
 import org.n52.geostatistics.uvs.method.Contouring;
 import org.n52.geostatistics.uvs.method.DynamicVisualizationMethod;
+import org.n52.geostatistics.uvs.method.ExceedanceProbabilityMapping;
+import org.n52.geostatistics.uvs.method.Glyphs;
+import org.n52.geostatistics.uvs.method.HierachicalSpatialDataStructures;
 import org.n52.geostatistics.uvs.method.InteractiveVisualizationMethod;
+import org.n52.geostatistics.uvs.method.IntervalsAndErrorbars;
+import org.n52.geostatistics.uvs.method.Opacity;
+import org.n52.geostatistics.uvs.method.RGBColourModel;
 import org.n52.geostatistics.uvs.method.StaticVisualizationMethod;
+import org.n52.geostatistics.uvs.method.StatisticalDimensionInAGIS;
+import org.n52.geostatistics.uvs.method.SymbolFocus;
 import org.n52.geostatistics.uvs.method.VisualizationMethod;
+import org.n52.geostatistics.uvs.method.Whitening;
 import org.n52.geostatistics.uvs.type.AttributeUncertainty;
 import org.n52.geostatistics.uvs.type.CategoricalType;
 import org.n52.geostatistics.uvs.type.ContinuousType;
@@ -125,19 +139,15 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007) ");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
 
 			}
@@ -149,12 +159,10 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007) ");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
 
 			}
@@ -166,12 +174,10 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007) ");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
 
 			}
@@ -182,19 +188,15 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007) ");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
 
 			}
@@ -206,19 +208,15 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007)");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
 
 			}
@@ -226,12 +224,10 @@ public class UvsModel {
 			if (uT instanceof AttributeUncertainty
 					&& dF instanceof RasterFormat
 					&& dT instanceof ContinuousType && d instanceof OtherDomain) {
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
 
 			}
@@ -243,26 +239,20 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007) ");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
-				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new IntervalsAndErrorbars(
 						uT,
 						dF,
-						dT,
-						"Intervals and Errorbars",
-						"The length of the error bars represents the low and high uncertainties, where wider bars represent higher uncertainties and narrower bars represent lower uncertainties. Similarly, wider intervals indicate higher uncertainties and narrower intervals indicate lower uncerrtainties");
+						dT);
 				visMethodsList.add(intervalsAndErrorBarsMethod);
 
 			}
@@ -274,26 +264,20 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				StaticVisualizationMethod glyphsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod glyphsMethod = new Glyphs(
 						uT,
 						dF,
-						dT,
-						"Glyphs",
-						"The uncertainty and the data are represented in a bivariate depiction through pictorial symbols,  known as glyphs (Pang 2001)");
+						dT);
 				visMethodsList.add(glyphsMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007)");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
-				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new IntervalsAndErrorbars(
 						uT,
 						dF,
-						dT,
-						"Intervals and Errorbars",
-						"The length of the error bars represents the low and high uncertainties, where wider bars represent higher uncertainties and narrower bars represent lower uncertainties. Similarly, wider intervals indicate higher uncertainties and narrower intervals indicate lower uncerrtainties");
+						dT);
 				visMethodsList.add(intervalsAndErrorBarsMethod);
 
 			}
@@ -305,19 +289,15 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007)");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
-				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new IntervalsAndErrorbars(
 						uT,
 						dF,
-						dT,
-						"Intervals and Errorbars",
-						"The length of the error bars represents the low and high uncertainties, where wider bars represent higher uncertainties and narrower bars represent lower uncertainties. Similarly, wider intervals indicate higher uncertainties and narrower intervals indicate lower uncerrtainties");
+						dT);
 				visMethodsList.add(intervalsAndErrorBarsMethod);
 
 			}
@@ -329,26 +309,20 @@ public class UvsModel {
 						dT);
 				visMethodsList.add(contouringMethod);
 
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007)");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
-				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new IntervalsAndErrorbars(
 						uT,
 						dF,
-						dT,
-						"Intervals and Errorbars",
-						"The length of the error bars represents the low and high uncertainties, where wider bars represent higher uncertainties and narrower bars represent lower uncertainties. Similarly, wider intervals indicate higher uncertainties and narrower intervals indicate lower uncerrtainties");
+						dT);
 				visMethodsList.add(intervalsAndErrorBarsMethod);
 
 			}
@@ -360,26 +334,20 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007) ");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
-				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new IntervalsAndErrorbars(
 						uT,
 						dF,
-						dT,
-						"Intervals and Errorbars",
-						"The length of the error bars represents the low and high uncertainties, where wider bars represent higher uncertainties and narrower bars represent lower uncertainties. Similarly, wider intervals indicate higher uncertainties and narrower intervals indicate lower uncerrtainties");
+						dT);
 				visMethodsList.add(intervalsAndErrorBarsMethod);
 
 			}
@@ -387,12 +355,10 @@ public class UvsModel {
 			if (uT instanceof AttributeUncertainty
 					&& dF instanceof VectorFormat
 					&& dT instanceof ContinuousType && d instanceof OtherDomain) {
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
 
 			}
@@ -401,12 +367,10 @@ public class UvsModel {
 					&& dF instanceof RasterFormat
 					&& dT instanceof CategoricalType
 					&& d instanceof MapVisualisationDomain) {
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
 			}
 			if (uT instanceof AttributeUncertainty
@@ -425,12 +389,10 @@ public class UvsModel {
 			if (uT instanceof AttributeUncertainty
 					&& dF instanceof RasterFormat
 					&& dT instanceof CategoricalType && d instanceof GISDomain) {
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
 			}
 
@@ -438,12 +400,10 @@ public class UvsModel {
 					&& dF instanceof RasterFormat
 					&& dT instanceof CategoricalType
 					&& d instanceof StatisticsDomain) {
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
 			}
 
@@ -451,12 +411,10 @@ public class UvsModel {
 					&& dF instanceof RasterFormat
 					&& dT instanceof CategoricalType
 					&& d instanceof OtherDomain) {
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
 			}
 			// Fourth branch
@@ -464,24 +422,20 @@ public class UvsModel {
 					&& dF instanceof VectorFormat
 					&& dT instanceof CategoricalType
 					&& d instanceof MapVisualisationDomain) {
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
 			}
 			if (uT instanceof AttributeUncertainty
 					&& dF instanceof VectorFormat
 					&& dT instanceof CategoricalType
 					&& d instanceof UrbanPlanningDomain) {
-				StaticVisualizationMethod glyphsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod glyphsMethod = new Glyphs(
 						uT,
 						dF,
-						dT,
-						"Glyphs",
-						"The uncertainty and the data are represented in a bivariate depiction through pictorial symbols,  known as glyphs (Pang 2001)");
+						dT);
 				visMethodsList.add(glyphsMethod);
 			}
 			if (uT instanceof AttributeUncertainty
@@ -494,12 +448,10 @@ public class UvsModel {
 			if (uT instanceof AttributeUncertainty
 					&& dF instanceof VectorFormat
 					&& dT instanceof CategoricalType && d instanceof GISDomain) {
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
 			}
 
@@ -507,12 +459,10 @@ public class UvsModel {
 					&& dF instanceof VectorFormat
 					&& dT instanceof CategoricalType
 					&& d instanceof StatisticsDomain) {
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
 			}
 
@@ -520,12 +470,10 @@ public class UvsModel {
 					&& dF instanceof VectorFormat
 					&& dT instanceof CategoricalType
 					&& d instanceof OtherDomain) {
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
 			}
 			// Fifth branch
@@ -592,12 +540,10 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				StaticVisualizationMethod glyphsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod glyphsMethod = new Glyphs(
 						uT,
 						dF,
-						dT,
-						"Glyphs",
-						"The uncertainty and the data are represented in a bivariate depiction through pictorial symbols,  known as glyphs (Pang 2001)");
+						dT);
 				visMethodsList.add(glyphsMethod);
 			}
 			if (uT instanceof PositionalUncertainty
@@ -721,82 +667,60 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				StaticVisualizationMethod exceedanceProbabilityMappingMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod exceedanceProbabilityMappingMethod = new ExceedanceProbabilityMapping(
 						uT,
 						dF,
-						dT,
-						"ExceedanceProbabilityMapping",
-						"    Exceedance probability is used to depict the probability of exceeding a threshold in a certain pixel or area. This method is commonly used for environmental concentration maps where the exceedance of concentration thresholds are mapped (Van de Kassteele & Velders 2006).");
+						dT);
 				visMethodsList.add(exceedanceProbabilityMappingMethod);
-				StaticVisualizationMethod rgbColourModelMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod rgbColourModelMethod = new RGBColourModel(
 						uT,
 						dF,
-						dT,
-						"RgbColourModel",
-						"In a scenario where the uncertainty has to be generated for three variables, the colours red, green and blue are used to represent these variables whereas the amount of uncertainty is represented through the intensity of these colours, i.e. higher intensity indicates lower uncertainty. In instances where more than three variables are involved, the technique of colour mixing is incorporated (Hengl et al. 2002).");
+						dT);
 				visMethodsList.add(rgbColourModelMethod);
-				StaticVisualizationMethod whiteningMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod whiteningMethod = new Whitening(
 						uT,
 						dF,
-						dT,
-						"Whitening",
-						"A colour model is used where the colour hue is used to represent the data and the saturation-intensity (whiteness) is used to represent the associated uncertainty. The amount of white colour, proportional to the uncertinty is mixed in with the hue which represents the prediction (Hengl 2003).");
+						dT);
 				visMethodsList.add(whiteningMethod);
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
-				StaticVisualizationMethod symbolFocusMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod symbolFocusMethod = new SymbolFocus(
 						uT,
 						dF,
-						dT,
-						"Symbol Focus",
-						"The focus metaphor is based on the human perception of focussed and non-focused (blurred) views. Uncertain data is depicted out of focus, making it less precisely visible, e.g. foggy. More certain data is depicted in focus, e.g. crisp boundaries (MacEachren et al. 2005).");
+						dT);
 				visMethodsList.add(symbolFocusMethod);
-				StaticVisualizationMethod opacityMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod opacityMethod = new Opacity(
 						uT,
 						dF,
-						dT,
-						"Opacity",
-						"Less uncertain data is seen less opaque and more uncertain data is more opaque. This concept can also be used in reverse where uncertain data is shown more transparently (MacEachren et al. 2005). ");
+						dT);
 				visMethodsList.add(opacityMethod);
-				DynamicVisualizationMethod animatedIsolinesMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animatedIsolinesMethod = new AnimatedIsolines(
 						uT,
 						dF,
-						dT,
-						"Animated Isolines",
-						"The concept of contouring or isolines can also be used in an animated environment (Fauerbach et al. 1996).");
+						dT);
 				visMethodsList.add(animatedIsolinesMethod);
-				DynamicVisualizationMethod animationMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animationMethod = new Animation(
 						uT,
 						dF,
-						dT,
-						"Animation",
-						"Different realisations of the uncertain attribute are animated together in 2D to emphasise the uncertainty (Ehlschlaeger et al. 1997).");
+						dT);
 				visMethodsList.add(animationMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007) ");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
-				DynamicVisualizationMethod blinkingPixelsMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod blinkingPixelsMethod = new BlinkingPixels(
 						uT,
 						dF,
-						dT,
-						"Blinking Pixels",
-						"The categorical data in each grid cell of a map is represented by colour. The colour remains stable for pixels with less uncertain classifications and changes continuously proportional to the uncertainty in the data creating a flickering environment (Fisher 1993). ");
+						dT);
 				visMethodsList.add(blinkingPixelsMethod);
-				DynamicVisualizationMethod blinkingRegionsMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod blinkingRegionsMethod = new BlinkingRegions(
 						uT,
 						dF,
-						dT,
-						"Blinking Regions",
-						"Two layers of attribute data and uncertainty data are identified by their legends of varying classes of data and uncertainty respectively. These two images are overlaid on top of another and alternately displayed (Kardos et al. 2006).");
+						dT);
 				visMethodsList.add(blinkingRegionsMethod);
 
 			}
@@ -804,95 +728,71 @@ public class UvsModel {
 			if (uT instanceof AttributeUncertainty
 					&& dF instanceof VectorFormat
 					&& dT instanceof ContinuousType) {
-				StaticVisualizationMethod exceedanceProbabilityMappingMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod exceedanceProbabilityMappingMethod = new ExceedanceProbabilityMapping(
 						uT,
 						dF,
-						dT,
-						"ExceedanceProbabilityMapping",
-						"    Exceedance probability is used to depict the probability of exceeding a threshold in a certain pixel or area. This method is commonly used for environmental concentration maps where the exceedance of concentration thresholds are mapped (Van de Kassteele & Velders 2006). ");
+						dT);
 				visMethodsList.add(exceedanceProbabilityMappingMethod);
-				StaticVisualizationMethod rgbColourModelMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod rgbColourModelMethod = new RGBColourModel(
 						uT,
 						dF,
-						dT,
-						"RgbColourModel",
-						"In a scenario where the uncertainty has to be generated for three variables, the colours red, green and blue are used to represent these variables whereas the amount of uncertainty is represented through the intensity of these colours, i.e. higher intensity indicates lower uncertainty. In instances where more than three variables are involved, the technique of colour mixing is incorporated (Hengl et al. 2002).");
+						dT);
 				visMethodsList.add(rgbColourModelMethod);
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				StaticVisualizationMethod hierarchicalSpatialDataStructuresMethod = new StaticVisualizationMethod(
-						uT, dF, dT, "Hierarchical Spatial Data Structures", "");
+				StaticVisualizationMethod hierarchicalSpatialDataStructuresMethod = new HierachicalSpatialDataStructures(
+						uT, dF, dT);
 				visMethodsList.add(hierarchicalSpatialDataStructuresMethod);
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
-				StaticVisualizationMethod symbolFocusMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod symbolFocusMethod = new SymbolFocus(
 						uT,
 						dF,
-						dT,
-						"Symbol Focus",
-						"The focus metaphor is based on the human perception of focussed and non-focused (blurred) views. Uncertain data is depicted out of focus, making it less precisely visible, e.g. foggy. More certain data is depicted in focus, e.g. crisp boundaries (MacEachren et al. 2005).");
+						dT);
 				visMethodsList.add(symbolFocusMethod);
-				StaticVisualizationMethod opacityMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod opacityMethod = new Opacity(
 						uT,
 						dF,
-						dT,
-						"Opacity",
-						"Less uncertain data is seen less opaque and more uncertain data is more opaque. This concept can also be used in reverse where uncertain data is shown more transparently (MacEachren et al. 2005).");
+						dT);
 				visMethodsList.add(opacityMethod);
-				StaticVisualizationMethod glyphsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod glyphsMethod = new Glyphs(
 						uT,
 						dF,
-						dT,
-						"Glyphs",
-						"The uncertainty and the data are represented in a bivariate depiction through pictorial symbols,  known as glyphs (Pang 2001)");
+						dT);
 				visMethodsList.add(glyphsMethod);
-				StaticVisualizationMethod whiteningMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod whiteningMethod = new Whitening(
 						uT,
 						dF,
-						dT,
-						"Whitening",
-						"A colour model is used where the colour hue is used to represent the data and the saturation-intensity (whiteness) is used to represent the associated uncertainty. The amount of white colour, proportional to the uncertinty is mixed in with the hue which represents the prediction (Hengl 2003).");
+						dT);
 				visMethodsList.add(whiteningMethod);
-				DynamicVisualizationMethod animationMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animationMethod = new Animation(
 						uT,
 						dF,
-						dT,
-						"Animation",
-						"Different realisations of the uncertain attribute are animated together in 2D to emphasise the uncertainty (Ehlschlaeger et al. 1997).");
+						dT);
 				visMethodsList.add(animationMethod);
-				DynamicVisualizationMethod animatedIsolinesMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animatedIsolinesMethod = new AnimatedIsolines(
 						uT,
 						dF,
-						dT,
-						"Animated Isolines",
-						"The concept of contouring or isolines can also be used in an animated environment (Fauerbach et al. 1996).");
+						dT);
 				visMethodsList.add(animatedIsolinesMethod);
-				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod statisticalDimensionInaGISMethod = new StatisticalDimensionInAGIS(
 						uT,
 						dF,
-						dT,
-						"Statistical Dimension in a GIS",
-						"The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability (Pebesma et al. 2007) ");
+						dT);
 				visMethodsList.add(statisticalDimensionInaGISMethod);
-				DynamicVisualizationMethod blinkingRegionsMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod blinkingRegionsMethod = new BlinkingRegions(
 						uT,
 						dF,
-						dT,
-						"Blinking Regions",
-						"Two layers of attribute data and uncertainty data are identified by their legends of varying classes of data and uncertainty respectively. These two images are overlaid on top of another and alternately displayed (Kardos et al. 2006).");
+						dT);
 				visMethodsList.add(blinkingRegionsMethod);
-				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new InteractiveVisualizationMethod(
+				InteractiveVisualizationMethod intervalsAndErrorBarsMethod = new IntervalsAndErrorbars(
 						uT,
 						dF,
-						dT,
-						"Intervals and Errorbars",
-						"The length of the error bars represents the low and high uncertainties, where wider bars represent higher uncertainties and narrower bars represent lower uncertainties. Similarly, wider intervals indicate higher uncertainties and narrower intervals indicate lower uncerrtainties");
+						dT);
 				visMethodsList.add(intervalsAndErrorBarsMethod);
 
 			}
@@ -900,54 +800,40 @@ public class UvsModel {
 			if (uT instanceof AttributeUncertainty
 					&& dF instanceof RasterFormat
 					&& dT instanceof CategoricalType) {
-				StaticVisualizationMethod whiteningMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod whiteningMethod = new Whitening(
 						uT,
 						dF,
-						dT,
-						"Whitening",
-						"A colour model is used where the colour hue is used to represent the data and the saturation-intensity (whiteness) is used to represent the associated uncertainty. The amount of white colour, proportional to the uncertinty is mixed in with the hue which represents the prediction (Hengl 2003).");
+						dT);
 				visMethodsList.add(whiteningMethod);
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
-				StaticVisualizationMethod symbolFocusMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod symbolFocusMethod = new SymbolFocus(
 						uT,
 						dF,
-						dT,
-						"Symbol Focus",
-						"The focus metaphor is based on the human perception of focussed and non-focused (blurred) views. Uncertain data is depicted out of focus, making it less precisely visible, e.g. foggy. More certain data is depicted in focus, e.g. crisp boundaries (MacEachren et al. 2005).");
+						dT);
 				visMethodsList.add(symbolFocusMethod);
-				StaticVisualizationMethod opacityMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod opacityMethod = new Opacity(
 						uT,
 						dF,
-						dT,
-						"Opacity",
-						"Less uncertain data is seen less opaque and more uncertain data is more opaque. This concept can also be used in reverse where uncertain data is shown more transparently (MacEachren et al. 2005).");
+						dT);
 				visMethodsList.add(opacityMethod);
-				DynamicVisualizationMethod animationMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animationMethod = new Animation(
 						uT,
 						dF,
-						dT,
-						"Animation",
-						"Different realisations of the uncertain attribute are animated together in 2D to emphasise the uncertainty (Ehlschlaeger et al. 1997).");
+						dT);
 				visMethodsList.add(animationMethod);
-				DynamicVisualizationMethod blinkingPixelsMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod blinkingPixelsMethod = new BlinkingPixels(
 						uT,
 						dF,
-						dT,
-						"Blinking Pixels",
-						"The categorical data in each grid cell of a map is represented by colour. The colour remains stable for pixels with less uncertain classifications and changes continuously proportional to the uncertainty in the data creating a flickering environment (Fisher 1993).");
+						dT);
 				visMethodsList.add(blinkingPixelsMethod);
-				DynamicVisualizationMethod blinkingRegionsMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod blinkingRegionsMethod = new BlinkingRegions(
 						uT,
 						dF,
-						dT,
-						"Blinking Regions",
-						"Two layers of attribute data and uncertainty data are identified by their legends of varying classes of data and uncertainty respectively. These two images are overlaid on top of another and alternately displayed (Kardos et al. 2006).");
+						dT);
 				visMethodsList.add(blinkingRegionsMethod);
 
 			}
@@ -955,57 +841,43 @@ public class UvsModel {
 			if (uT instanceof AttributeUncertainty
 					&& dF instanceof VectorFormat
 					&& dT instanceof CategoricalType) {
-				StaticVisualizationMethod whiteningMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod whiteningMethod = new Whitening(
 						uT,
 						dF,
-						dT,
-						"Whitening",
-						"A colour model is used where the colour hue is used to represent the data and the saturation-intensity (whiteness) is used to represent the associated uncertainty. The amount of white colour, proportional to the uncertinty is mixed in with the hue which represents the prediction (Hengl 2003).");
+						dT);
 				visMethodsList.add(whiteningMethod);
-				StaticVisualizationMethod adjacentMapsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod adjacentMapsMethod = new AdjacentMaps(
 						uT,
 						dF,
-						dT,
-						"Adjacent Maps",
-						"This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended (MacEachren et al. 1998).");
+						dT);
 				visMethodsList.add(adjacentMapsMethod);
-				StaticVisualizationMethod symbolFocusMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod symbolFocusMethod = new SymbolFocus(
 						uT,
 						dF,
-						dT,
-						"Symbol Focus",
-						"The focus metaphor is based on the human perception of focussed and non-focused (blurred) views. Uncertain data is depicted out of focus, making it less precisely visible, e.g. foggy. More certain data is depicted in focus, e.g. crisp boundaries (MacEachren et al. 2005).");
+						dT);
 				visMethodsList.add(symbolFocusMethod);
-				StaticVisualizationMethod opacityMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod opacityMethod = new Opacity(
 						uT,
 						dF,
-						dT,
-						"Opacity",
-						"Less uncertain data is seen less opaque and more uncertain data is more opaque. This concept can also be used in reverse where uncertain data is shown more transparently (MacEachren et al. 2005).");
+						dT);
 				visMethodsList.add(opacityMethod);
-				StaticVisualizationMethod glyphsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod glyphsMethod = new Glyphs(
 						uT,
 						dF,
-						dT,
-						"Glyphs",
-						"The uncertainty and the data are represented in a bivariate depiction through pictorial symbols,  known as glyphs (Pang 2001)");
+						dT);
 				visMethodsList.add(glyphsMethod);
-				StaticVisualizationMethod hierarchicalSpatialDataStructuresMethod = new StaticVisualizationMethod(
-						uT, dF, dT, "Hierarchical Spatial Data Structures", "");
+				StaticVisualizationMethod hierarchicalSpatialDataStructuresMethod = new HierachicalSpatialDataStructures(
+						uT, dF, dT);
 				visMethodsList.add(hierarchicalSpatialDataStructuresMethod);
-				DynamicVisualizationMethod animationMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animationMethod = new Animation(
 						uT,
 						dF,
-						dT,
-						"Animation",
-						"Different realisations of the uncertain attribute are animated together in 2D to emphasise the uncertainty (Ehlschlaeger et al. 1997).");
+						dT);
 				visMethodsList.add(animationMethod);
-				DynamicVisualizationMethod blinkingRegionsMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod blinkingRegionsMethod = new BlinkingRegions(
 						uT,
 						dF,
-						dT,
-						"Blinking Regions",
-						"Two layers of attribute data and uncertainty data are identified by their legends of varying classes of data and uncertainty respectively. These two images are overlaid on top of another and alternately displayed (Kardos et al. 2006).");
+						dT);
 				visMethodsList.add(blinkingRegionsMethod);
 
 			}
@@ -1016,26 +888,20 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				DynamicVisualizationMethod animationMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animationMethod = new Animation(
 						uT,
 						dF,
-						dT,
-						"Animation",
-						"Different realisations of the uncertain attribute are animated together in 2D to emphasise the uncertainty (Ehlschlaeger et al. 1997).");
+						dT);
 				visMethodsList.add(animationMethod);
-				DynamicVisualizationMethod animatedIsolinesMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animatedIsolinesMethod = new AnimatedIsolines(
 						uT,
 						dF,
-						dT,
-						"Animated Isolines",
-						"The concept of contouring or isolines can also be used in an animated environment (Fauerbach et al. 1996).");
+						dT);
 				visMethodsList.add(animatedIsolinesMethod);
-				DynamicVisualizationMethod blinkingPixelsMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod blinkingPixelsMethod = new BlinkingPixels(
 						uT,
 						dF,
-						dT,
-						"Blinking Pixels",
-						"The categorical data in each grid cell of a map is represented by colour. The colour remains stable for pixels with less uncertain classifications and changes continuously proportional to the uncertainty in the data creating a flickering environment (Fisher 1993).");
+						dT);
 				visMethodsList.add(blinkingPixelsMethod);
 
 			}
@@ -1046,45 +912,35 @@ public class UvsModel {
 				VisualizationMethod contouringMethod = new Contouring(uT, dF,
 						dT);
 				visMethodsList.add(contouringMethod);
-				StaticVisualizationMethod glyphsMethod = new StaticVisualizationMethod(
+				StaticVisualizationMethod glyphsMethod = new Glyphs(
 						uT,
 						dF,
-						dT,
-						"Glyphs",
-						"The uncertainty and the data are represented in a bivariate depiction through pictorial symbols,  known as glyphs (Pang 2001)");
+						dT);
 				visMethodsList.add(glyphsMethod);
-				DynamicVisualizationMethod animationMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animationMethod = new Animation(
 						uT,
 						dF,
-						dT,
-						"Animation",
-						"Different realisations of the uncertain attribute are animated together in 2D to emphasise the uncertainty (Ehlschlaeger et al. 1997).");
+						dT);
 				visMethodsList.add(animationMethod);
-				DynamicVisualizationMethod animatedIsolinesMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animatedIsolinesMethod = new AnimatedIsolines(
 						uT,
 						dF,
-						dT,
-						"Animated Isolines",
-						"The concept of contouring or isolines can also be used in an animated environment (Fauerbach et al. 1996).");
+						dT);
 				visMethodsList.add(animatedIsolinesMethod);
 			}
 
 			if (uT instanceof PositionalUncertainty
 					&& dF instanceof RasterFormat
 					&& dT instanceof CategoricalType) {
-				DynamicVisualizationMethod animationMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animationMethod = new Animation(
 						uT,
 						dF,
-						dT,
-						"Animation",
-						"Different realisations of the uncertain attribute are animated together in 2D to emphasise the uncertainty (Ehlschlaeger et al. 1997).");
+						dT);
 				visMethodsList.add(animationMethod);
-				DynamicVisualizationMethod blinkingPixelsMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod blinkingPixelsMethod = new BlinkingPixels(
 						uT,
 						dF,
-						dT,
-						"Blinking Pixels",
-						"The categorical data in each grid cell of a map is represented by colour. The colour remains stable for pixels with less uncertain classifications and changes continuously proportional to the uncertainty in the data creating a flickering environment (Fisher 1993).");
+						dT);
 				visMethodsList.add(blinkingPixelsMethod);
 
 			}
@@ -1092,12 +948,10 @@ public class UvsModel {
 			if (uT instanceof PositionalUncertainty
 					&& dF instanceof VectorFormat
 					&& dT instanceof CategoricalType) {
-				DynamicVisualizationMethod animationMethod = new DynamicVisualizationMethod(
+				DynamicVisualizationMethod animationMethod = new Animation(
 						uT,
 						dF,
-						dT,
-						"Animation",
-						"Different realisations of the uncertain attribute are animated together in 2D to emphasise the uncertainty (Ehlschlaeger et al. 1997).");
+						dT);
 				visMethodsList.add(animationMethod);
 
 				// end

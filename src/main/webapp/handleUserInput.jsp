@@ -28,10 +28,33 @@ limitations under the License.
 <head>
 <title>Uncertainty Visualisation Selection Result</title>
 
-<link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="tinybox.js" />
+<script type="text/javascript">
+	function openJS() {
+		alert('loaded')
+	}
+	function closeJS() {
+		alert('closed')
+	}
+</script>
 
 <link href="<%=request.getContextPath()%>/favicon.png"
 	rel="shortcut icon" type="image/x-icon" />
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28300786-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
 </head>
 <body>
@@ -70,9 +93,11 @@ limitations under the License.
 					out.println("<b>Description:</b> " + visListElement.description);
 					out.println("</li>");
 				}
+			
+				
 			%>
+						
 		</ol>
-
 		<jsp:include page="footer.jsp" />
 	</div>
 
