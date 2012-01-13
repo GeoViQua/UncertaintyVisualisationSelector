@@ -28,9 +28,10 @@ limitations under the License.
 <head>
 <title>Uncertainty Visualisation Selection Result</title>
 
-<link href="style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="style.css" type="text/css" />
 
-<script type="text/javascript" src="tinybox.js" />
+<script type="text/javascript" src="tinybox.js"> </script>
 <script type="text/javascript">
 	function openJS() {
 		alert('loaded')
