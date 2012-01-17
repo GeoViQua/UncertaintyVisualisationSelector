@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.domain;
  */
 public class OtherDomain extends Domain {
 
-	public OtherDomain() {
+    public OtherDomain() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
+    public void finalize() throws Throwable {
+        super.finalize();
+    }
 }// end OtherDomain

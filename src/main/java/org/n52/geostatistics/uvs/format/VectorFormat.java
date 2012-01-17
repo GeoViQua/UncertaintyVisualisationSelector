@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.format;
  */
 public class VectorFormat extends DataFormat {
 
-	public VectorFormat() {
+    public VectorFormat() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
+    public void finalize() throws Throwable {
+        super.finalize();
+    }
 }// end VectorFormat

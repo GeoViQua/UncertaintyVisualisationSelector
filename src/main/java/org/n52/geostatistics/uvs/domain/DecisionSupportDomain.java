@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.domain;
  */
 public class DecisionSupportDomain extends Domain {
 
-	public DecisionSupportDomain() {
+    public DecisionSupportDomain() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
+    public void finalize() throws Throwable {
+        super.finalize();
+    }
 }// end DecisionSupportDomain

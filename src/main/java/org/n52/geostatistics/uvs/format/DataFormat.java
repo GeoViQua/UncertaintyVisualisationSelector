@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.format;
  */
 public abstract class DataFormat {
 
-	public DataFormat() {
+    public DataFormat() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
+    public void finalize() throws Throwable {
 
-	}
+    }
 }// end DataFormat

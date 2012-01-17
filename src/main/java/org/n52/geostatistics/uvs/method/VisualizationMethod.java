@@ -16,9 +16,6 @@
  */
 package org.n52.geostatistics.uvs.method;
 
-import java.util.Collection;
-import java.util.Map;
-
 import org.n52.geostatistics.uvs.format.DataFormat;
 import org.n52.geostatistics.uvs.type.DataType;
 import org.n52.geostatistics.uvs.type.UncertaintyType;
@@ -32,61 +29,55 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class VisualizationMethod {
 
-	public String description;
+    public String description;
 
-	/*
-	 * 
-	 */
-	public String descriptionText;
+    Logger logger = LoggerFactory.getLogger(VisualizationMethod.class);
 
-	public Map<String, String> referenceLinks;
+    public DataFormat m_DataFormat;
 
-	public Collection<String> images;
+    public DataType m_DataType;
 
-	Logger logger = LoggerFactory.getLogger(VisualizationMethod.class);
-	public DataFormat m_DataFormat;
-	public DataType m_DataType;
-	public UncertaintyType m_UncertaintyType;
-	public String name;
+    public UncertaintyType m_UncertaintyType;
 
-	/**
-	 * 
-	 * @param uT
-	 * @param dF
-	 * @param dT
-	 * @param n
-	 * @param des
-	 */
-	public VisualizationMethod(UncertaintyType uT, DataFormat dF, DataType dT,
-			String n, String des) {
-		m_UncertaintyType = uT;
-		m_DataType = dT;
-		m_DataFormat = dF;
-		name = n;
-		description = des;
+    public String name;
 
-		logger.debug("NEW {}", this);
-	}
+    /**
+     * 
+     * @param uT
+     * @param dF
+     * @param dT
+     * @param n
+     * @param des
+     */
+    public VisualizationMethod(UncertaintyType uT, DataFormat dF, DataType dT, String n, String des) {
+        m_UncertaintyType = uT;
+        m_DataType = dT;
+        m_DataFormat = dF;
+        name = n;
+        description = des;
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
+        logger.debug("NEW {}", this);
+    }
 
-		sb.append(this.name);
-		sb.append(" [");
-		sb.append(this.m_UncertaintyType);
-		sb.append(", ");
-		sb.append(this.m_DataFormat);
-		sb.append(", ");
-		sb.append(this.m_DataType);
-		sb.append("]");
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
 
-		return sb.toString();
-	}
+        sb.append(this.name);
+        sb.append(" [");
+        sb.append(this.m_UncertaintyType);
+        sb.append(", ");
+        sb.append(this.m_DataFormat);
+        sb.append(", ");
+        sb.append(this.m_DataType);
+        sb.append("]");
+
+        return sb.toString();
+    }
 
 }// end VisualizationMethod

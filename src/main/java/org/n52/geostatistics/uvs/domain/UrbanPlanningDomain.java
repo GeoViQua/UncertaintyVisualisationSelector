@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.domain;
  */
 public class UrbanPlanningDomain extends Domain {
 
-	public UrbanPlanningDomain() {
+    public UrbanPlanningDomain() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
+    public void finalize() throws Throwable {
+        super.finalize();
+    }
 }// end UrbanPlanningDomain

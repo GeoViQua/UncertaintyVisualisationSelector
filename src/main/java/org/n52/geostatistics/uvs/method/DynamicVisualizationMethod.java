@@ -27,21 +27,20 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class DynamicVisualizationMethod extends VisualizationMethod {
 
-	/**
-	 * 
-	 * @param uT
-	 * @param dF
-	 * @param dT
-	 * @param n
-	 * @param des
-	 */
-	public DynamicVisualizationMethod(UncertaintyType uT, DataFormat dF,
-			DataType dT, String n, String des) {
-		super(uT, dF, dT, n, des);
-	}
+    /**
+     * 
+     * @param uT
+     * @param dF
+     * @param dT
+     * @param n
+     * @param des
+     */
+    public DynamicVisualizationMethod(UncertaintyType uT, DataFormat dF, DataType dT, String n, String des) {
+        super(uT, dF, dT, n, des);
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
+    public void finalize() throws Throwable {
+        super.finalize();
+    }
 
 }// end DynamicVisualizationMethod

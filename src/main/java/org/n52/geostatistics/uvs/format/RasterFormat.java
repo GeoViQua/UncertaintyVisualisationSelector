@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.format;
  */
 public class RasterFormat extends DataFormat {
 
-	public RasterFormat() {
+    public RasterFormat() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
+    public void finalize() throws Throwable {
+        super.finalize();
+    }
 }// end RasterFormat

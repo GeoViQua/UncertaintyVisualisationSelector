@@ -1,5 +1,5 @@
 /**
- *Copyright 2011 52°North Initiative for Geospatial Open Source Software GmbH
+ * Copyright 2011 52°North Initiative for Geospatial Open Source Software GmbH
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License. 
  */
-
 package org.n52.geostatistics.uvs.method;
 
 import org.n52.geostatistics.uvs.format.DataFormat;
@@ -25,20 +24,21 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  * @author v_sena01
  * 
  */
-
 public class BlinkingRegions extends DynamicVisualizationMethod {
 
-	private static String name = "Bling Regions";
-	private static String description = "Two layers of attribute data and uncertainty data are identified by their legends of varying classes of data and uncertainty respectively. These two images are overlaid on top of another and alternately displayed. <a href = 'http://www.spatial-accuracy.org/system/files/Kardos2006accuracy.pdf'>(Kardos et al. 2006) </a>";
+    private static String name = "Bling Regions";
 
-	/**
-	 * 
-	 * @param uT
-	 * @param dF
-	 * @param dT
-	 */
-	public BlinkingRegions(UncertaintyType uT, DataFormat dF, DataType dT) {
-		super(uT, dF, dT, name, description);
-	}
+    private static String description =
+            "Two layers of attribute data and uncertainty data are identified by their legends of varying classes of data and uncertainty respectively. These two images are overlaid on top of another and alternately displayed. <a href = 'http://www.spatial-accuracy.org/system/files/Kardos2006accuracy.pdf'>(Kardos et al. 2006) </a>";
+
+    /**
+     * 
+     * @param uT
+     * @param dF
+     * @param dT
+     */
+    public BlinkingRegions(UncertaintyType uT, DataFormat dF, DataType dT) {
+        super(uT, dF, dT, name, description);
+    }
 
 }

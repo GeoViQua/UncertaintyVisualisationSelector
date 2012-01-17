@@ -27,13 +27,12 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class InteractiveVisualizationMethod extends VisualizationMethod {
 
-	public InteractiveVisualizationMethod(UncertaintyType uT, DataFormat dF,
-			DataType dT, String n, String des) {
-		super(uT, dF, dT, n, des);
+    public InteractiveVisualizationMethod(UncertaintyType uT, DataFormat dF, DataType dT, String n, String des) {
+        super(uT, dF, dT, n, des);
 
-	}
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
+    public void finalize() throws Throwable {
+        super.finalize();
+    }
 }// end InteractiveVisualizationMethod

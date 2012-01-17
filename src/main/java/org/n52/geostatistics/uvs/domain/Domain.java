@@ -27,18 +27,18 @@ import org.n52.geostatistics.uvs.method.VisualizationMethod;
  */
 public abstract class Domain {
 
-	// attributes:
-	// visibility: public (private, protected)
-	// type: ArrayList + <element type>
-	// name: m_VisMethodList
-	public ArrayList<VisualizationMethod> m_VisMethodList;
+    // attributes:
+    // visibility: public (private, protected)
+    // type: ArrayList + <element type>
+    // name: m_VisMethodList
+    public ArrayList<VisualizationMethod> m_VisMethodList;
 
-	// constructor:
-	public Domain() {
+    // constructor:
+    public Domain() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
+    public void finalize() throws Throwable {
 
-	}
+    }
 }// end Domain
