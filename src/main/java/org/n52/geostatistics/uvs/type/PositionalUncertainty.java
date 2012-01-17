@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.type;
  */
 public class PositionalUncertainty extends UncertaintyType {
 
-	public PositionalUncertainty() {
+    public PositionalUncertainty() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
+    public void finalize() throws Throwable {
+        super.finalize();
+    }
 }// end PositionalUncertainty

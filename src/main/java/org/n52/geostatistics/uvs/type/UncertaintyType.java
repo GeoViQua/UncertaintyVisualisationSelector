@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.type;
  */
 public abstract class UncertaintyType {
 
-	public UncertaintyType() {
+    public UncertaintyType() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
+    public void finalize() throws Throwable {
 
-	}
+    }
 }// end UncertaintyType

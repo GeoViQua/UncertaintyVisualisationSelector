@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.type;
  */
 public abstract class DataType {
 
-	public DataType() {
+    public DataType() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
+    public void finalize() throws Throwable {
 
-	}
+    }
 }// end DataType

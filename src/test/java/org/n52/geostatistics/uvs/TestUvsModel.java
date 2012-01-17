@@ -43,79 +43,78 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class TestUvsModel {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
 
-		String uncertaintyType = "Attribute";
-		String dataFormat = "Raster";
-		String dataType = "Continuous";
-		// String domain = "Map Visualisation";
-		// String domain = "Urban Planning";
-		String domain = "Decision Support";
-		// String domain = "";
+        String uncertaintyType = "Attribute";
+        String dataFormat = "Raster";
+        String dataType = "Continuous";
+        // String domain = "Map Visualisation";
+        // String domain = "Urban Planning";
+        String domain = "Decision Support";
+        // String domain = "";
 
-		// initialize the object according to the String value:
-		UncertaintyType uT = getUncertaintyType(uncertaintyType);
-		DataFormat dF = getDataFormat(dataFormat);
-		DataType dT = getDataType(dataType);
-		Domain d = getDomain(domain);
+        // initialize the object according to the String value:
+        UncertaintyType uT = getUncertaintyType(uncertaintyType);
+        DataFormat dF = getDataFormat(dataFormat);
+        DataType dT = getDataType(dataType);
+        Domain d = getDomain(domain);
 
-		ArrayList<VisualizationMethod> visList = new UvsModel()
-				.getCorrecVisMethodsForUserInputs(uT, dF, dT, d);
+        ArrayList<VisualizationMethod> visList = new UvsModel().getCorrecVisMethodsForUserInputs(uT, dF, dT, d);
 
-		for (VisualizationMethod visListElement : visList) {
-			System.out.println("name: " + visListElement.name);
-			System.out.println("description: " + visListElement.description);
-		}
-	}
+        for (VisualizationMethod visListElement : visList) {
+            System.out.println("name: " + visListElement.name);
+            System.out.println("description: " + visListElement.description);
+        }
+    }
 
-	private static Domain getDomain(String domain) {
-		Domain d = null;
-		if (domain.equals("Map Visualisation")) {
-			d = new MapVisualisationDomain();
-		} else if (domain.equals("Urban Planning")) {
-			d = new UrbanPlanningDomain();
-		} else if (domain.equals("Decision Support")) {
-			d = new DecisionSupportDomain();
-		} else if (domain.equals("GIS")) {
-			d = new GISDomain();
-		} else if (domain.equals("Statistics")) {
-			d = new StatisticsDomain();
-		} else if (domain.equals("Other")) {
-			d = new OtherDomain();
-		}
-		return d;
-	}
+    private static Domain getDomain(String domain) {
+        Domain d = null;
+        if (domain.equals("Map Visualisation")) {
+            d = new MapVisualisationDomain();
+        } else if (domain.equals("Urban Planning")) {
+            d = new UrbanPlanningDomain();
+        } else if (domain.equals("Decision Support")) {
+            d = new DecisionSupportDomain();
+        } else if (domain.equals("GIS")) {
+            d = new GISDomain();
+        } else if (domain.equals("Statistics")) {
+            d = new StatisticsDomain();
+        } else if (domain.equals("Other")) {
+            d = new OtherDomain();
+        }
+        return d;
+    }
 
-	private static DataType getDataType(String dataType) {
-		DataType dT = null;
-		if (dataType.equals("Continuous")) {
-			dT = new ContinuousType();
-		} else if (dataType.equals("Categorical")) {
-			dT = new CategoricalType();
-		}
-		return dT;
-	}
+    private static DataType getDataType(String dataType) {
+        DataType dT = null;
+        if (dataType.equals("Continuous")) {
+            dT = new ContinuousType();
+        } else if (dataType.equals("Categorical")) {
+            dT = new CategoricalType();
+        }
+        return dT;
+    }
 
-	private static DataFormat getDataFormat(String dataFormat) {
-		DataFormat dF = null;
-		if (dataFormat.equals("Raster")) {
-			dF = new RasterFormat();
-		} else if (dataFormat.equals("Vector")) {
-			dF = new VectorFormat();
-		}
-		return dF;
-	}
+    private static DataFormat getDataFormat(String dataFormat) {
+        DataFormat dF = null;
+        if (dataFormat.equals("Raster")) {
+            dF = new RasterFormat();
+        } else if (dataFormat.equals("Vector")) {
+            dF = new VectorFormat();
+        }
+        return dF;
+    }
 
-	private static UncertaintyType getUncertaintyType(String uncertaintyType) {
-		UncertaintyType uT = null;
-		if (uncertaintyType.equals("Attribute")) {
-			uT = new AttributeUncertainty();
-		} else if (uncertaintyType.equals("Positional")) {
-			uT = new PositionalUncertainty();
-		}
-		return uT;
-	}
+    private static UncertaintyType getUncertaintyType(String uncertaintyType) {
+        UncertaintyType uT = null;
+        if (uncertaintyType.equals("Attribute")) {
+            uT = new AttributeUncertainty();
+        } else if (uncertaintyType.equals("Positional")) {
+            uT = new PositionalUncertainty();
+        }
+        return uT;
+    }
 }

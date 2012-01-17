@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.type;
  */
 public class CategoricalType extends DataType {
 
-	public CategoricalType() {
+    public CategoricalType() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
+    public void finalize() throws Throwable {
+        super.finalize();
+    }
 }// end CategoricalType

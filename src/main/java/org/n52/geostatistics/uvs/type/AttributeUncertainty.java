@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.type;
  */
 public class AttributeUncertainty extends UncertaintyType {
 
-	public AttributeUncertainty() {
+    public AttributeUncertainty() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
-}// end AttributeUncertainty
+    public void finalize() throws Throwable {
+        super.finalize();
+    }
+} // end AttributeUncertainty

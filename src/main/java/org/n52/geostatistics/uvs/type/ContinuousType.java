@@ -23,11 +23,11 @@ package org.n52.geostatistics.uvs.type;
  */
 public class ContinuousType extends DataType {
 
-	public ContinuousType() {
+    public ContinuousType() {
 
-	}
+    }
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
+    public void finalize() throws Throwable {
+        super.finalize();
+    }
 }// end ContinuousType
