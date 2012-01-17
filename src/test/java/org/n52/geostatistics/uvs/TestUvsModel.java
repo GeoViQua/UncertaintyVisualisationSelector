@@ -66,7 +66,7 @@ public class TestUvsModel {
 
         for (VisualizationMethod visListElement : visList) {
             System.out.println("name: " + visListElement.name);
-            System.out.println("description: " + visListElement.description);
+            System.out.println("description: " + visListElement.descriptionText);
         }
     }
 

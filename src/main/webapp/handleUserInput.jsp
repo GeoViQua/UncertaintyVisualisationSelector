@@ -17,6 +17,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
+<%@page import="javax.swing.text.StyledEditorKit.ForegroundAction"%>
+<%@page import="java.util.Iterator"%>
 <%@ page import="org.n52.geostatistics.uvs.*"%>
 <%@ page import="org.n52.geostatistics.uvs.domain.*"%>
 <%@ page import="org.n52.geostatistics.uvs.format.*"%>
@@ -72,15 +74,16 @@ limitations under the License.
 	<div id="main">
 		<h1>Uncertainty Visualisation Selection Result</h1>
 		<%
-			String uncertaintyType = request.getParameter("UncertaintyType");
-			String dataFormat = request.getParameter("DataFormat");
-			String dataType = request.getParameter("DataType");
-			String domain = request.getParameter("domain");
+		    String uncertaintyType = request.getParameter("UncertaintyType");
+		    String dataFormat = request.getParameter("DataFormat");
+		    String dataType = request.getParameter("DataType");
+		    String domain = request.getParameter("domain");
 
-			UvsModel model = new UvsModel();
-			ArrayList<VisualizationMethod> visList = model
-					.getCorrecVisMethodsForUserInputs(uncertaintyType,
-							dataFormat, dataType, domain);
+		    UvsModel model = new UvsModel();
+		    ArrayList<VisualizationMethod> visList = model.getCorrecVisMethodsForUserInputs(uncertaintyType,
+		                                                                                    dataFormat,
+		                                                                                    dataType,
+		                                                                                    domain);
 		%>
 
 		<h2>Your selection was:</h2>
@@ -96,29 +99,55 @@ limitations under the License.
 
 		<ol>
 			<%
-				for (VisualizationMethod visListElement : visList) {
-					out.println("<li>");
-					out.println("<b>Method name:</b> " + visListElement.name);
-					out.println("<br />");
-					out.println("<b>Description:</b> " + visListElement.description);
-					
-					// untested code to start with:
-					/*
-					out.println("<b>Description:</b> " + visListElement.descriptionText);
-					out.println("<br/><b>References:</b> ");
-					Set<Entry<String, String>> links = visListElement.referenceLinks.entrySet();
-					while(links.iterator().hasNext()) {
-						Entry<String, String> e = links.iterator().next();
-						out.println("<a href=\"" + e.getValue() + "\"");
-						out.println(e.getKey());
-						out.println("</a>");
-					}
-					*/
-					
-					out.println("</li>");
-				}
-			%>
+			    for (VisualizationMethod visListElement : visList) {
+			        out.println("<li>");
+			        out.println("<b>Method name:</b> " + visListElement.name);
+			        out.println("<br />");
+			        // 					out.println("<b>Description:</b> " + visListElement.description);
 
+			        // untested code to start with:
+			        out.print("<b>Description:</b> " + visListElement.descriptionText);
+			        out.print("(");
+			        Set<Entry<String, String>> links = visListElement.referenceLinks.entrySet();
+			        Iterator<Entry<String, String>> iter = links.iterator();
+			        while (iter.hasNext()) {
+			            Entry<String, String> e = iter.next();
+			            out.print("<a href=\"" + e.getValue() + "\" ");
+			            out.print("title=\"");
+			            out.print(e.getKey());
+			            out.print("\">");
+			            out.print(e.getKey());
+			            out.println("</a>");
+
+			            if (iter.hasNext()) {
+			                out.println(", ");
+			            }
+			        }
+			        out.println(")");
+
+			        out.println("<div id='scriptiny'>");
+
+			        Set<Entry<String, String>> images = visListElement.images.entrySet();
+			        Iterator<Entry<String, String>> iter2 = images.iterator();
+
+			        while (iter2.hasNext()) {
+			            Entry<String, String> e2 = iter2.next();
+			            out.print("<span onclick='TINY.box.show({iframe:\"");
+			            out.print(e2.getKey());
+			            out.print("\",boxid:\"frameless\",width:550,height:450,fixed:false,maskid:\"bluemask\",");
+			            out.print("maskopacity:40,closejs:function (){closeJS()}})' >");
+			            out.print("<p><img src=\"");
+			            out.print(e2.getKey());
+			            out.print("\" width=\"40\" height=\"30\"/><br /><em>");
+			            out.print(e2.getValue());
+			            out.print("</em></p></span>");
+			        }
+
+			        out.println("</div>");
+
+			        out.println("</li>");
+			    }
+			%>
 		</ol>
 		<jsp:include page="footer.jsp" />
 	</div>

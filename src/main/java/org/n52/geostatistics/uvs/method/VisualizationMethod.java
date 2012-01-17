@@ -14,7 +14,11 @@
  * limitations under the License.
  * 
  */
+
 package org.n52.geostatistics.uvs.method;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import org.n52.geostatistics.uvs.format.DataFormat;
 import org.n52.geostatistics.uvs.type.DataType;
@@ -29,7 +33,11 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class VisualizationMethod {
 
-    public String description;
+    public String descriptionText = "NA";
+
+    public Map<String, String> referenceLinks = new HashMap<String, String>();
+
+    public Map<String, String> images = new HashMap<String, String>();
 
     Logger logger = LoggerFactory.getLogger(VisualizationMethod.class);
 
@@ -54,7 +62,7 @@ public abstract class VisualizationMethod {
         m_DataType = dT;
         m_DataFormat = dF;
         name = n;
-        description = des;
+        descriptionText = des;
 
         logger.debug("NEW {}", this);
     }
