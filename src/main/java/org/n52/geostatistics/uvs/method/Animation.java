@@ -26,10 +26,9 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class Animation extends DynamicVisualizationMethod {
 
-    private static String name = "Animation";
+    private static String n = "Animation";
 
-    private static String description =
-            "Different realisations of the uncertain attribute are animated together in 2D to emphasise the uncertainty. <a href ='http://www.sciencedirect.com/science/article/pii/S0098300497000058'>(Ehlschlaeger et al. 1997) </a>.";
+    private static String d = "Different realisations of the uncertain attribute are animated together in 2D to emphasise the uncertainty.";
 
     /**
      * 
@@ -38,6 +37,9 @@ public class Animation extends DynamicVisualizationMethod {
      * @param dT
      */
     public Animation(UncertaintyType uT, DataFormat dF, DataType dT) {
-        super(uT, dF, dT, name, description);
+        super(uT, dF, dT, n, d);
+        
+        referenceLinks.put("Ehlschlaeger et al. 1997",
+                "http://www.sciencedirect.com/science/article/pii/S0098300497000058");
     }
 }

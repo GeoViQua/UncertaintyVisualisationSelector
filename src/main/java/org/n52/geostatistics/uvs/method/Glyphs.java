@@ -26,10 +26,9 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class Glyphs extends StaticVisualizationMethod {
 
-    private static String name = "Glyphs";
+    private static String n = "Glyphs";
 
-    private static String description =
-            "The uncertainty and the data are represented in a bivariate depiction through pictorial symbols, known as glyphs. <a href = 'ftp://128.114.49.249/pub/reinas/papers/geo.pdf'> (Pang 2001) </a> <div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'images/symbols.png/',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function (){closeJS()}})'><img src='images/symbols.png' width = '50' height = '40'/></li></ul> </div> ";
+    private static String d = "The uncertainty and the data are represented in a bivariate depiction through pictorial symbols, known as glyphs.";
 
     /**
      * 
@@ -38,6 +37,9 @@ public class Glyphs extends StaticVisualizationMethod {
      * @param dT
      */
     public Glyphs(UncertaintyType uT, DataFormat dF, DataType dT) {
-        super(uT, dF, dT, name, description);
+        super(uT, dF, dT, n, d);
+
+        images.put("images/symbols.png", "");
+        referenceLinks.put("Pang 2001", "ftp://128.114.49.249/pub/reinas/papers/geo.pdf");
     }
 }

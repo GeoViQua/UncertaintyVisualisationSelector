@@ -25,10 +25,10 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class AdjacentMaps extends StaticVisualizationMethod {
 
-    private static String name = "Adjacent Maps";
+    private static String n = "Adjacent Maps";
 
-    private static String description =
-            "This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended. <a href='http://www.envplan.com/abstract.cgi?id=a301547'>(MacEachren et al. 1998)</a> <div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'images/Adjacent_Maps.png/',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function (){closeJS()}})'><img src='images/Adjacent_Maps.png' width = '50' height = '40'/></li> </ul></div> ";
+    private static String d =
+            "This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended. ";
 
     /**
      * class constructor creating objects of class AdjacentMaps
@@ -38,7 +38,10 @@ public class AdjacentMaps extends StaticVisualizationMethod {
      * @param dT
      */
     public AdjacentMaps(UncertaintyType uT, DataFormat dF, DataType dT) {
-        super(uT, dF, dT, name, description);
+        super(uT, dF, dT, n, d);
+
+        images.put("images/Adjacent_Maps.png", "");
+        referenceLinks.put("MacEachren et al. 1998", "href='http://www.envplan.com/abstract.cgi?id=a301547");
     }
 
 }

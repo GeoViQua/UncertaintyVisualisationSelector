@@ -17,7 +17,9 @@
 
 package org.n52.geostatistics.uvs.method;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.n52.geostatistics.uvs.format.DataFormat;
@@ -38,6 +40,8 @@ public abstract class VisualizationMethod {
     public Map<String, String> referenceLinks = new HashMap<String, String>();
 
     public Map<String, String> images = new HashMap<String, String>();
+    
+    public List<VideoDemo> videos = new ArrayList<VideoDemo>();
 
     Logger logger = LoggerFactory.getLogger(VisualizationMethod.class);
 

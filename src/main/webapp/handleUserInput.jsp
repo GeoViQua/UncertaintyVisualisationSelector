@@ -74,16 +74,15 @@ limitations under the License.
 	<div id="main">
 		<h1>Uncertainty Visualisation Selection Result</h1>
 		<%
-		    String uncertaintyType = request.getParameter("UncertaintyType");
-		    String dataFormat = request.getParameter("DataFormat");
-		    String dataType = request.getParameter("DataType");
-		    String domain = request.getParameter("domain");
+			String uncertaintyType = request.getParameter("UncertaintyType");
+			String dataFormat = request.getParameter("DataFormat");
+			String dataType = request.getParameter("DataType");
+			String domain = request.getParameter("domain");
 
-		    UvsModel model = new UvsModel();
-		    ArrayList<VisualizationMethod> visList = model.getCorrecVisMethodsForUserInputs(uncertaintyType,
-		                                                                                    dataFormat,
-		                                                                                    dataType,
-		                                                                                    domain);
+			UvsModel model = new UvsModel();
+			ArrayList<VisualizationMethod> visList = model
+					.getCorrecVisMethodsForUserInputs(uncertaintyType,
+							dataFormat, dataType, domain);
 		%>
 
 		<h2>Your selection was:</h2>
@@ -94,61 +93,95 @@ limitations under the License.
 			<li>domain = <%=domain%></li>
 		</ul>
 
-		<h2>The most suitable visualisation methods for this selection
-			are:</h2>
+		<%
+			if (visList.isEmpty()) {
+				out.println("<h2>Currently there are no methods assessed for this selection. Please select 'None' from domain and submit again");
+			} else {
+				out.println("<h2>The most suitable visualisation methods for this selection are:</h2>");
+			}
+		%>
 
 		<ol>
 			<%
-			    for (VisualizationMethod visListElement : visList) {
-			        out.println("<li>");
-			        out.println("<b>Method name:</b> " + visListElement.name);
-			        out.println("<br />");
-			        // 					out.println("<b>Description:</b> " + visListElement.description);
+				for (VisualizationMethod visListElement : visList) {
+					out.println("<div>");
 
-			        // untested code to start with:
-			        out.print("<b>Description:</b> " + visListElement.descriptionText);
-			        out.print("(");
-			        Set<Entry<String, String>> links = visListElement.referenceLinks.entrySet();
-			        Iterator<Entry<String, String>> iter = links.iterator();
-			        while (iter.hasNext()) {
-			            Entry<String, String> e = iter.next();
-			            out.print("<a href=\"" + e.getValue() + "\" ");
-			            out.print("title=\"");
-			            out.print(e.getKey());
-			            out.print("\">");
-			            out.print(e.getKey());
-			            out.println("</a>");
+					out.println("<b>Method name:</b> " + visListElement.name);
+					out.println("<br />");
+					// 					out.println("<b>Description:</b> " + visListElement.description);
 
-			            if (iter.hasNext()) {
-			                out.println(", ");
-			            }
-			        }
-			        out.println(")");
+					// untested code to start with:
+					out.print("<b>Description:</b> "
+							+ visListElement.descriptionText);
+					out.print("(");
+					Set<Entry<String, String>> links = visListElement.referenceLinks
+							.entrySet();
+					Iterator<Entry<String, String>> iter = links.iterator();
+					while (iter.hasNext()) {
+						Entry<String, String> e = iter.next();
+						out.print("<a href=\"" + e.getValue() + "\" ");
+						out.print("title=\"");
+						out.print(e.getKey());
+						out.print("\">");
+						out.print(e.getKey());
+						out.println("</a>");
 
-			        out.println("<div id='scriptiny'>");
+						if (iter.hasNext()) {
+							out.println(", ");
+						}
+					}
+					out.println(")");
 
-			        Set<Entry<String, String>> images = visListElement.images.entrySet();
-			        Iterator<Entry<String, String>> iter2 = images.iterator();
+					Set<Entry<String, String>> images = visListElement.images
+							.entrySet();
+					Iterator<Entry<String, String>> iter2 = images.iterator();
 
-			        while (iter2.hasNext()) {
-			            Entry<String, String> e2 = iter2.next();
-			            out.print("<span onclick='TINY.box.show({iframe:\"");
-			            out.print(e2.getKey());
-			            out.print("\",boxid:\"frameless\",width:550,height:450,fixed:false,maskid:\"bluemask\",");
-			            out.print("maskopacity:40,closejs:function (){closeJS()}})' >");
-			            out.print("<p><img src=\"");
-			            out.print(e2.getKey());
-			            out.print("\" width=\"40\" height=\"30\"/><br /><em>");
-			            out.print(e2.getValue());
-			            out.print("</em></p></span>");
-			        }
+					while (iter2.hasNext()) {
+						Entry<String, String> e2 = iter2.next();
+						out.println("<ul>");
+						out.println("<li>");
+						out.print("<span onclick='TINY.box.show({iframe:\"");
+						out.print(e2.getKey());
+						out.print("\",boxid:\"frameless\",width:550,height:450,fixed:false,maskid:\"bluemask\",");
+						out.print("maskopacity:40,closejs:function (){closeJS()}})' >");
+						out.print("<p><img src=\"");
+						out.print(e2.getKey());
+						out.print("\" width=\"40\" height=\"30\"/><br /><em>");
+						out.print(e2.getValue());
+						out.print("</em></p></span>");
+						out.println("</li>");
+						out.println("</ul>");
+					}
 
-			        out.println("</div>");
+					for (VideoDemo video : visListElement.videos) {
+						out.println("<div>");
+						out.println("<em>Click image for a video demo</em> ");
+						out.println("<ul>");
+						out.println("<li>");
+						out.println("<span onclick='TINY.box.show(");
+						out.println("{iframe:");
+						out.println("\"" + video.videoLink + "\",");
+						out.println("boxid:\"frameless\",");
+						out.println("width:");
+						out.println("\"" + video.iframeWidth + "\",");
+						out.println("height:");
+						out.println("\"" + video.iframeHeight + "\",");
+						out.println("fixed:false,");
+						out.println("maskid:\"bluemask\",");
+						out.println("maskopacity:40,closejs:function (){closeJS()}})'>");
+						out.println("<p><img src='" + video.tinyImageLink + "' width = '40' height = '30' />");
+						out.println("</p>");
+						out.println("</span>");
+						out.println("</li>");
+						out.println("</ul>");
+						out.println("</div>");
+					}
 
-			        out.println("</li>");
-			    }
+					out.println("</div>");
+				}
 			%>
 		</ol>
+
 		<jsp:include page="footer.jsp" />
 	</div>
 

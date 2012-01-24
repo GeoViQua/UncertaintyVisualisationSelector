@@ -26,10 +26,9 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class Opacity extends StaticVisualizationMethod {
 
-    private static String name = "Opacity";
+    private static String n = "Opacity";
 
-    private static String description =
-            "Less uncertain data is seen less opaque and more uncertain data is more opaque. This concept can also be used in reverse where uncertain data is shown more transparently. <a href = 'http://www.nws.noaa.gov/ost/nfuse/MacEachren_et_al_FINAL.pdf'>(MacEachren et al. 2005)</a><div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'images/Opacity.png/',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS()}})'><img src='images/Opacity.png' width = '50' height = '40'/><em>Image taken from Grigoryan & Rheingans 2004</em></li> </ul></div> ";
+    private static String d ="Less uncertain data is seen less opaque and more uncertain data is more opaque. This concept can also be used in reverse where uncertain data is shown more transparently. ";
 
     /**
      * 
@@ -38,7 +37,10 @@ public class Opacity extends StaticVisualizationMethod {
      * @param dT
      */
     public Opacity(UncertaintyType uT, DataFormat dF, DataType dT) {
-        super(uT, dF, dT, name, description);
+        super(uT, dF, dT, n, d);
+
+        images.put("images/Opacity.png", "Image taken from Grigoryan & Rheingans 2004");
+        referenceLinks.put("MacEachren et al. 2005", "http://www.nws.noaa.gov/ost/nfuse/MacEachren_et_al_FINAL.pdf");
     }
 
 }

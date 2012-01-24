@@ -26,10 +26,10 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class Whitening extends StaticVisualizationMethod {
 
-    private static String name = "Whitening";
+    private static String n = "Whitening";
 
-    private static String description =
-            "A colour model is used where the colour hue is used to represent the data and the saturation-intensity (whiteness) is used to represent the associated uncertainty. The amount of white colour, proportional to the uncertinty is mixed in with the hue which represents the prediction. <a href='http://www.spatial-accuracy.org/system/files/Hengl2006accuracy.pdf'>(Hengl 2006)</a> <div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'images/Whitening.png/',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function (){closeJS()}})'><img src='images/Whitening.png' width = '50' height = '40'/><em>Image taken from Hengl & Toomanian 2006</em></li> </ul></div> ";
+    private static String d =
+            "A colour model is used where the colour hue is used to represent the data and the saturation-intensity (whiteness) is used to represent the associated uncertainty. The amount of white colour, proportional to the uncertinty is mixed in with the hue which represents the prediction. ";
 
     /**
      * 
@@ -38,6 +38,9 @@ public class Whitening extends StaticVisualizationMethod {
      * @param dT
      */
     public Whitening(UncertaintyType uT, DataFormat dF, DataType dT) {
-        super(uT, dF, dT, name, description);
+        super(uT, dF, dT, n, d);
+        
+        images.put("images/Whitening.png", "Image taken from Hengl & Toomanian 2006");
+        referenceLinks.put("Hengl 2006", "http://www.spatial-accuracy.org/system/files/Hengl2006accuracy.pdf");
     }
 }

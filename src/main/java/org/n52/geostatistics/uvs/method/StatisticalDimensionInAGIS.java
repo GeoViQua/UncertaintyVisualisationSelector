@@ -26,10 +26,10 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class StatisticalDimensionInAGIS extends InteractiveVisualizationMethod {
 
-    private static String name = "Statistical Dimention in a GIS";
+    private static String n = "Statistical Dimension in a GIS";
 
-    private static String description =
-            "The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability. <a href ='http://www.tandfonline.com/doi/pdf/10.1080/13658810601064009'>(Pebesma et al. 2007) </a> <div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'http://www.youtube.com/watch?v=3carYnbow54',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function (){closeJS()}})'> <em>Click image for a demo</em> <img src='images/Aguila.png' width = '50' height = '40'/></li> </ul></div> ";
+    private static String d =
+            "The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability.  ";
 
     /**
      * 
@@ -38,6 +38,9 @@ public class StatisticalDimensionInAGIS extends InteractiveVisualizationMethod {
      * @param dT
      */
     public StatisticalDimensionInAGIS(UncertaintyType uT, DataFormat dF, DataType dT) {
-        super(uT, dF, dT, name, description);
+        super(uT, dF, dT, n, d);
+
+        referenceLinks.put("Pebesma et al. 2007", "http://www.tandfonline.com/doi/pdf/10.1080/13658810601064009");
+        videos.add(new VideoDemo("video_aguila.html", "images/Aguila.png", 620, 380));
     }
 }

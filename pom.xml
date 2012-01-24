@@ -5,7 +5,7 @@
 	<groupId>org.n52.geostatistics</groupId>
 	<artifactId>52n-uvs</artifactId>
 	<packaging>war</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.1-SNAPSHOT</version>
 
 	<name>UVS</name>
 	<description>Uncertainty Visualisation Selector</description>
@@ -76,7 +76,7 @@
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>8.0.4.v20111024</version>
 				<configuration>
-					<scanIntervalSeconds>2</scanIntervalSeconds>
+					<scanIntervalSeconds>1</scanIntervalSeconds>
 					<webApp>
 						<contextPath>/${project.name}</contextPath>
 					</webApp>

@@ -26,10 +26,9 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class HierachicalSpatialDataStructures extends StaticVisualizationMethod {
 
-    private static String name = "Hierachical Spatial Data Structures";
+    private static String n = "Hierachical Spatial Data Structures";
 
-    private static String description =
-            "Hierarchical data structures (e.g. Quadtrees) are used as a transparent tessellated layer on top of the data  to represent the amount of associated uncertainty. A finer tessellation can indicate less uncertain areas whereas a coarser tessellation can indicate more uncertain regions. <a href = 'http://www.geocomputation.org/2003/Papers/Kardos_Paper.pdf'>(Kardos et al. 2003)</a> <div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'images/Hierarchical_spatial_data_structures.png/',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function (){closeJS()}})'><img src='images/Hierarchical_spatial_data_structures.png' width = '50' height = '40'/> <em> Image taken from Kardos et al. 2004</em></li></ul> </div> ";
+    private static String d = "Hierarchical data structures (e.g. Quadtrees) are used as a transparent tessellated layer on top of the data  to represent the amount of associated uncertainty. A finer tessellation can indicate less uncertain areas whereas a coarser tessellation can indicate more uncertain regions.";
 
     /**
      * 
@@ -38,7 +37,11 @@ public class HierachicalSpatialDataStructures extends StaticVisualizationMethod 
      * @param dT
      */
     public HierachicalSpatialDataStructures(UncertaintyType uT, DataFormat dF, DataType dT) {
-        super(uT, dF, dT, name, description);
+        super(uT, dF, dT, n, d);
+        
+        images.put("images/Hierarchical_spatial_data_structures.png", "Image taken from Kardos et al. 2004");
+        referenceLinks.put("Kardos et al. 2003",
+                           "http://www.geocomputation.org/2003/Papers/Kardos_Paper.pdf");
     }
 
 }

@@ -26,10 +26,10 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class SymbolFocus extends StaticVisualizationMethod {
 
-    private static String name = "Symol Focus";
+    private static String n = "Symol Focus";
 
-    private static String description =
-            "The focus metaphor is based on the human perception of focussed and non-focused (blurred) views. Uncertain data is depicted out of focus, making it less precisely visible, e.g. foggy. More certain data is depicted in focus, e.g. crisp boundaries. <a href = 'http://www.nws.noaa.gov/ost/nfuse/MacEachren_et_al_FINAL.pdf'>(MacEachren et al. 2005) </a> <div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'images/focus_metaphors.png/',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function (){closeJS()}})'><img src='images/focus_metaphors.png' width = '50' height = '40'/><em>Image taken from MacEachren et al. 2005</em></li> </ul></div> ";
+    private static String d =
+            "The focus metaphor is based on the human perception of focussed and non-focused (blurred) views. Uncertain data is depicted out of focus, making it less precisely visible, e.g. foggy. More certain data is depicted in focus, e.g. crisp boundaries. ";
 
     /**
      * 
@@ -38,6 +38,9 @@ public class SymbolFocus extends StaticVisualizationMethod {
      * @param dT
      */
     public SymbolFocus(UncertaintyType uT, DataFormat dF, DataType dT) {
-        super(uT, dF, dT, name, description);
+        super(uT, dF, dT, n, d);
+        
+        images.put("images/focus_metaphors.png", "Image taken from MacEachren et al. 2005");
+        referenceLinks.put("MacEachren et al. 2005", "http://www.nws.noaa.gov/ost/nfuse/MacEachren_et_al_FINAL.pdf");
     }
 }

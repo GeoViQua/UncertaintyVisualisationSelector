@@ -26,10 +26,10 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class BlinkingRegions extends DynamicVisualizationMethod {
 
-    private static String name = "Bling Regions";
+    private static String n = "Blinking Regions";
 
-    private static String description =
-            "Two layers of attribute data and uncertainty data are identified by their legends of varying classes of data and uncertainty respectively. These two images are overlaid on top of another and alternately displayed. <a href = 'http://www.spatial-accuracy.org/system/files/Kardos2006accuracy.pdf'>(Kardos et al. 2006) </a>";
+    private static String d =
+            "Two layers of attribute data and uncertainty data are identified by their legends of varying classes of data and uncertainty respectively. These two images are overlaid on top of another and alternately displayed. ";
 
     /**
      * 
@@ -38,7 +38,9 @@ public class BlinkingRegions extends DynamicVisualizationMethod {
      * @param dT
      */
     public BlinkingRegions(UncertaintyType uT, DataFormat dF, DataType dT) {
-        super(uT, dF, dT, name, description);
+        super(uT, dF, dT, n, d);
+
+        referenceLinks.put("Kardos et al. 2006", "http://www.spatial-accuracy.org/system/files/Kardos2006accuracy.pdf");
     }
 
 }

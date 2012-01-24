@@ -70,10 +70,10 @@ limitations under the License.
 					<option value="Attribute">Attribute</option>
 					<option value="Positional">Positional</option>
 				</select>
-				<div id="scriptinyright">
+				<div class="scriptinyright">
 					<ul>
 						<li
-							onclick="TINY.box.show ({iframe:'uncertaintyTypesDescription.html',boxid:'frameless',width:400,height:150, fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS ()}})">Learn
+							onclick="TINY.box.show ({iframe:'uncertaintyTypesDescription.html',boxid:'frameless',width:500,height:350, fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS ()}})">Learn
 							more...</li>
 					</ul>
 				</div>
@@ -86,10 +86,10 @@ limitations under the License.
 					<option value="Raster">Raster</option>
 					<option value="Vector">Vector</option>
 				</select>
-				<div id="scriptinyright">
+				<div class="scriptinyright">
 					<ul>
 						<li
-							onclick="TINY.box.show ({iframe:'dataFormatDescription.html',boxid:'frameless',width:400,height:150,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS ()}})">Learn
+							onclick="TINY.box.show ({iframe:'dataFormatDescription.html',boxid:'frameless',width:500,height:350,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS ()}})">Learn
 							more...</li>
 					</ul>
 				</div>
@@ -102,10 +102,10 @@ limitations under the License.
 					<option value="Continuous">Continuous</option>
 					<option value="Categorical">Categorical</option>
 				</select>
-				<div id="scriptinyright">
+				<div class="scriptinyright">
 					<ul>
 						<li
-							onclick="TINY.box.show ({iframe:'dataTypeDescription.html',boxid:'frameless',width:400,height:150,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS ()}})">Learn
+							onclick="TINY.box.show ({iframe:'dataTypeDescription.html',boxid:'frameless',width:500,height:350,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS ()}})">Learn
 							more...</li>
 					</ul>
 				</div>
@@ -124,10 +124,10 @@ limitations under the License.
 					<option value="Statistics">Statistics</option>
 					<option value="Other">Other</option>
 				</select>
-				<div id="scriptinyright">
+				<div class="scriptinyright">
 					<ul>
 						<li
-							onclick="TINY.box.show ({iframe:'domainDescription.html',boxid:'frameless',width:400,height:150,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS ()}})">Learn
+							onclick="TINY.box.show ({iframe:'domainDescription.html',boxid:'frameless',width:500,height:350,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS ()}})">Learn
 							more...</li>
 					</ul>
 
@@ -155,7 +155,7 @@ limitations under the License.
 				this research can be expected in the near future.</p>
 			<p>
 				For further inquiries please drop an email to <a
-					href="mailto:hansi.senaratne@uni-muenster.de">hansi.senaratne@uni-muenster.de</a>.
+					href="mailto:hansi.senaratne@uni-muenster.de">hansi.senaratne@uni-muenster.de</a>
 			</p>
 
 

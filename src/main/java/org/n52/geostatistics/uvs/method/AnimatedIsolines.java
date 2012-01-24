@@ -26,11 +26,10 @@ import org.n52.geostatistics.uvs.type.UncertaintyType;
  */
 public class AnimatedIsolines extends DynamicVisualizationMethod {
 
-    private static String name = "Animated Isolines";
+    private static String n = "Animated Isolines";
 
-    private static String description =
-            "The concept of contouring or isolines can also be used in an animated environment. <a href = 'http://www.geovista.psu.edu/sites/icavis/icavis/febm.html'>(Fauerbach et al. 1996) </a>. <div id='scriptiny'><ul> <li onclick='TINY.box.show({iframe:'http://www.geovista.psu.edu/sites/icavis/icavis/febm/sdhbivar.html',boxid:'frameless',width:550,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function (){closeJS()}})'> <em>Click image for a demo</em> <img src='images/Animated_Isoline.png' width = '50' height = '40'/></li></ul> </div> ";
-
+    private static String d = "The concept of contouring or isolines can also be used in an animated environment. ";
+            
     /**
      * 
      * @param uT
@@ -38,6 +37,11 @@ public class AnimatedIsolines extends DynamicVisualizationMethod {
      * @param dT
      */
     public AnimatedIsolines(UncertaintyType uT, DataFormat dF, DataType dT) {
-        super(uT, dF, dT, name, description);
+        super(uT, dF, dT, n, d);
+        
+        referenceLinks.put("Fauerbach et al. 1996", "http://www.geovista.psu.edu/sites/icavis/icavis/febm.html");
+        videos.add(new VideoDemo("video_animatedIsolines.html", "images/Animated_Isoline.png", 620, 380));
+
     }
+
 }
