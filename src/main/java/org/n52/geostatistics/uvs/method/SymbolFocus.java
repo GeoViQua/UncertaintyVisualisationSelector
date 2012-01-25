@@ -29,7 +29,7 @@ public class SymbolFocus extends StaticVisualizationMethod {
     private static String n = "Symol Focus";
 
     private static String d =
-            "The focus metaphor is based on the human perception of focussed and non-focused (blurred) views. Uncertain data is depicted out of focus, making it less precisely visible, e.g. foggy. More certain data is depicted in focus, e.g. crisp boundaries. ";
+            "The focus metaphor is based on the human perception of focussed and non-focused (blurred) views. Uncertain data is depicted out of focus, making it less precisely visible, e.g. foggy. More certain data is depicted in focus, e.g. crisp boundaries.";
 
     /**
      * 

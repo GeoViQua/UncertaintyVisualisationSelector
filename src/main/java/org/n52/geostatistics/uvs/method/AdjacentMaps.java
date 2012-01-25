@@ -28,7 +28,7 @@ public class AdjacentMaps extends StaticVisualizationMethod {
     private static String n = "Adjacent Maps";
 
     private static String d =
-            "This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended. ";
+            "This method presents value and uncertainty on two separate maps adjacent to each other. Through comparing the two maps the degree of uncertainty at different points can be comprehended.";
 
     /**
      * class constructor creating objects of class AdjacentMaps

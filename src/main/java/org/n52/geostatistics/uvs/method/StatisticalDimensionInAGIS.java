@@ -29,7 +29,7 @@ public class StatisticalDimensionInAGIS extends InteractiveVisualizationMethod {
     private static String n = "Statistical Dimension in a GIS";
 
     private static String d =
-            "The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability.  ";
+            "The uncertainty of the data is represented by the cumulative probability functions for each pixel or vector object. Depending on the chosen quantile or threshold value, the map colour scale shows the associated value or probability.";
 
     /**
      * 

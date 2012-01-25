@@ -28,7 +28,7 @@ public class Opacity extends StaticVisualizationMethod {
 
     private static String n = "Opacity";
 
-    private static String d ="Less uncertain data is seen less opaque and more uncertain data is more opaque. This concept can also be used in reverse where uncertain data is shown more transparently. ";
+    private static String d ="Less uncertain data is seen less opaque and more uncertain data is more opaque. This concept can also be used in reverse where uncertain data is shown more transparently.";
 
     /**
      * 

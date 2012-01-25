@@ -29,7 +29,7 @@ public class ExceedanceProbabilityMapping extends StaticVisualizationMethod {
 
     private static String n = "Exceedance Probability Mapping";
 
-    private static String d = "Exceedance probability is used to depict the probability of exceeding a threshold in a certain pixel or area. This method is commonly used for environmental concentration maps where the exceedance of concentration thresholds are mapped. ";
+    private static String d = "Exceedance probability is used to depict the probability of exceeding a threshold in a certain pixel or area. This method is commonly used for environmental concentration maps where the exceedance of concentration thresholds are mapped.";
 
     /**
      * 

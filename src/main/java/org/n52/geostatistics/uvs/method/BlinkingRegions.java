@@ -29,7 +29,7 @@ public class BlinkingRegions extends DynamicVisualizationMethod {
     private static String n = "Blinking Regions";
 
     private static String d =
-            "Two layers of attribute data and uncertainty data are identified by their legends of varying classes of data and uncertainty respectively. These two images are overlaid on top of another and alternately displayed. ";
+            "Two layers of attribute data and uncertainty data are identified by their legends of varying classes of data and uncertainty respectively. These two images are overlaid on top of another and alternately displayed.";
 
     /**
      * 

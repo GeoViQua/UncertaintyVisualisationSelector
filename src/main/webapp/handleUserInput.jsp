@@ -95,9 +95,9 @@ limitations under the License.
 
 		<%
 			if (visList.isEmpty()) {
-				out.println("<h2>Currently there are no methods assessed for this selection. Please select 'None' from domain and submit again");
+				out.println("<h2>Currently there are no methods assessed for this selection. Please select 'None' from domain and submit again.");
 			} else {
-				out.println("<h2>The most suitable visualisation methods for this selection are:</h2>");
+				out.println("<h2>The most suitable visualisation methods for this selection are (ordered, best at the top):</h2>");
 			}
 		%>
 
@@ -106,28 +106,28 @@ limitations under the License.
 				for (VisualizationMethod visListElement : visList) {
 					out.println("<div>");
 
-					out.println("<b>Method name:</b> " + visListElement.name);
+					out.print("<b>Method name:</b> " + visListElement.name);
 					out.println("<br />");
-					// 					out.println("<b>Description:</b> " + visListElement.description);
 
-					// untested code to start with:
 					out.print("<b>Description:</b> "
 							+ visListElement.descriptionText);
-					out.print("(");
+					
+					// refernce links:
+					out.print(" (");
 					Set<Entry<String, String>> links = visListElement.referenceLinks
 							.entrySet();
 					Iterator<Entry<String, String>> iter = links.iterator();
 					while (iter.hasNext()) {
 						Entry<String, String> e = iter.next();
-						out.print("<a href=\"" + e.getValue() + "\" ");
+						out.print("<a href=\"" + e.getValue() + "\"");
 						out.print("title=\"");
 						out.print(e.getKey());
 						out.print("\">");
 						out.print(e.getKey());
-						out.println("</a>");
+						out.print("</a>");
 
 						if (iter.hasNext()) {
-							out.println(", ");
+							out.print(", ");
 						}
 					}
 					out.println(")");
@@ -135,8 +135,11 @@ limitations under the License.
 					Set<Entry<String, String>> images = visListElement.images
 							.entrySet();
 					Iterator<Entry<String, String>> iter2 = images.iterator();
+					
+					boolean imageOrVideo = false;
 
 					while (iter2.hasNext()) {
+					    imageOrVideo = true;
 						Entry<String, String> e2 = iter2.next();
 						out.println("<ul>");
 						out.println("<li>");
@@ -154,6 +157,7 @@ limitations under the License.
 					}
 
 					for (VideoDemo video : visListElement.videos) {
+					    imageOrVideo = true;
 						out.println("<div>");
 						out.println("<em>Click image for a video demo</em> ");
 						out.println("<ul>");
@@ -176,6 +180,8 @@ limitations under the License.
 						out.println("</ul>");
 						out.println("</div>");
 					}
+					
+					if(!imageOrVideo) out.println("<div style=\"height: 50px;\">&nbsp;</div>");
 
 					out.println("</div>");
 				}

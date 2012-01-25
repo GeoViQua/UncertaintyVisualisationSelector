@@ -28,7 +28,7 @@ public class AnimatedIsolines extends DynamicVisualizationMethod {
 
     private static String n = "Animated Isolines";
 
-    private static String d = "The concept of contouring or isolines can also be used in an animated environment. ";
+    private static String d = "The concept of contouring or isolines can also be used in an animated environment.";
             
     /**
      * 

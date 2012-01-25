@@ -29,7 +29,7 @@ public class Whitening extends StaticVisualizationMethod {
     private static String n = "Whitening";
 
     private static String d =
-            "A colour model is used where the colour hue is used to represent the data and the saturation-intensity (whiteness) is used to represent the associated uncertainty. The amount of white colour, proportional to the uncertinty is mixed in with the hue which represents the prediction. ";
+            "A colour model is used where the colour hue is used to represent the data and the saturation-intensity (whiteness) is used to represent the associated uncertainty. The amount of white colour, proportional to the uncertinty is mixed in with the hue which represents the prediction.";
 
     /**
      * 
