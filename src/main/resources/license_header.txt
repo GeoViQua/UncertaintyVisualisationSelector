@@ -1,4 +1,4 @@
-Copyright 2013 52°North Initiative for Geospatial Open Source Software GmbH
+Copyright ${year} 52°North Initiative for Geospatial Open Source Software GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -11,10 +11,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-This project includes:
-  Apache Log4j under The Apache Software License, Version 2.0
-  SLF4J API Module under MIT License
-  SLF4J LOG4J-12 Binding under MIT License
-  UVS under The Apache Software License, Version 2.0
-
